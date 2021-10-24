@@ -3,4 +3,5 @@
     <string name="my_name">Twilly Sparkley</string>
     <string name="subscribe">подписаться 😄</string>
     <string name="about_me">Я люблю писать код на Kotlin, но ненавижу писать Unit тесты, потому что слишком самоуверен 😋</string>
+    <string name="subscribed">Спасибо, что подписались!</string>
 </resources>
