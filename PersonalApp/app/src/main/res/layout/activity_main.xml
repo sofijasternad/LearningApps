@@ -16,5 +16,27 @@
         android:src="@drawable/pony"
         android:scaleType="centerCrop" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:text="@string/about_me"
+        app:layout_constraintStart_toEndOf="@id/avatar_img"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:textSize="18sp"
+        android:textColor="@color/blue_700"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/subscribe_button"
+        android:layout_width="250dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/subscribe" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

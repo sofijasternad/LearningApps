@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">PersonalApp</string>
     <string name="my_name">Twilly Sparkley</string>
+    <string name="subscribe">подписаться 😄</string>
+    <string name="about_me">Я люблю писать код на Kotlin, но ненавижу писать Unit тесты, потому что слишком самоуверен 😋</string>
 </resources>
