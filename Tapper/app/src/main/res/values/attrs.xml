@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="bgColor" format="color"></attr>
+    <declare-styleable name="IconButton">
+        <attr name="rippleColor" format="color"></attr>
+        <attr name="cornerRadius" format="dimension"></attr>
+        <attr name="bgColor" />
+    </declare-styleable>
+</resources>
