@@ -1,4 +1,4 @@
-package ru.freeit.tapper
+package ru.freeit.tapper.presentation.view
 
 import android.animation.ValueAnimator
 import android.content.Context
@@ -9,6 +9,7 @@ import android.util.AttributeSet
 import android.view.View
 import androidx.core.animation.doOnEnd
 import androidx.core.content.ContextCompat
+import ru.freeit.tapper.R
 import kotlin.random.Random
 
 fun Int.transparent(alpha: Int) : Int {

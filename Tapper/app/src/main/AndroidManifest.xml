@@ -12,7 +12,7 @@
         tools:replace="android:theme"
         android:theme="@style/Theme.Tapper">
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
