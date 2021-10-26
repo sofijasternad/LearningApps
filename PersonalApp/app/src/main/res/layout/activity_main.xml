@@ -41,5 +41,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="@string/subscribe" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
