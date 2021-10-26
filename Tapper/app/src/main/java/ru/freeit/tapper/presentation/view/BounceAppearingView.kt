@@ -1,23 +1,14 @@
 package ru.freeit.tapper.presentation.view
 
-import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.Canvas
-import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
-import androidx.core.animation.doOnEnd
 import androidx.core.content.ContextCompat
 import ru.freeit.tapper.R
+import ru.freeit.tapper.presentation.anim.PercentAnimator
 import kotlin.random.Random
-
-fun Int.transparent(alpha: Int) : Int {
-    val red = Color.red(this)
-    val green = Color.green(this)
-    val blue = Color.blue(this)
-    return Color.argb(alpha, red, green, blue)
-}
 
 class BounceAppearingView @JvmOverloads constructor(
     ctx: Context,
@@ -31,15 +22,12 @@ class BounceAppearingView @JvmOverloads constructor(
         private val maxRadius: Int,
         private val alpha: Int = 100
     ) {
-
         fun draw(canvas: Canvas, paint: Paint, radiusPercent: Int, alphaPercent: Int) {
             val newColor = paint.color.transparent((alpha * (alphaPercent / 100f)).toInt())
             canvas.drawCircle(x * 1f, y * 1f, maxRadius * (radiusPercent / 100f), paint.apply {
                 color = newColor
             })
         }
-
-
     }
 
     private var points = mutableListOf<Bounce>()
@@ -50,8 +38,7 @@ class BounceAppearingView @JvmOverloads constructor(
         color = ContextCompat.getColor(context, R.color.purple_500)
     }
 
-    fun appear() {
-
+    private fun regeneratePoints() {
         points.clear()
 
         for (i in 0 until 50) {
@@ -60,32 +47,25 @@ class BounceAppearingView @JvmOverloads constructor(
             val maxRadius = 40 + Random.nextInt(100)
             points.add(Bounce(x, y, maxRadius, Random.nextInt(50, 120)))
         }
+    }
 
+    fun appear() {
 
+        regeneratePoints()
 
-        ValueAnimator.ofInt(0, 100).apply {
-            duration = 300L
-            addUpdateListener {
+        PercentAnimator().let { animator ->
+            animator.animToHigh(300, onUpdate = {
                 radiusPercent = it.animatedValue as Int
                 invalidate()
-            }
-
-            doOnEnd {
-                ValueAnimator.ofInt(100, 0).apply {
-                    duration = 200L
-                    addUpdateListener {
-                        alphaPercent = it.animatedValue as Int
-                        invalidate()
-                    }
-                    doOnEnd {
-                        radiusPercent = 0
-                        alphaPercent = 100
-                    }
-                    start()
-                }
-            }
-
-            start()
+            }, onEnd = {
+                animator.animToLow(200, onUpdate = {
+                    alphaPercent = it.animatedValue as Int
+                    invalidate()
+                }, onEnd = {
+                    radiusPercent = 0
+                    alphaPercent = 100
+                })
+            })
         }
 
     }
@@ -94,7 +74,6 @@ class BounceAppearingView @JvmOverloads constructor(
         for (point in points) {
             point.draw(canvas, paint, radiusPercent, alphaPercent)
         }
-
     }
 
 }
