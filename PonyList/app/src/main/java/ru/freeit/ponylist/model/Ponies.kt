@@ -2,7 +2,10 @@ package ru.freeit.ponylist.model
 
 import ru.freeit.ponylist.R
 
-class Ponies(private val observer: (ponies: List<Pony>) -> Unit) {
+class Ponies {
+
+    private val observers = mutableListOf<(ponies: List<Pony>) -> Unit>()
+
     private val allPonies = listOf(
         Pony(
             id = 0,
@@ -48,6 +51,7 @@ class Ponies(private val observer: (ponies: List<Pony>) -> Unit) {
             type = R.string.ground_pony
         ),
     )
+
     private val ponies = mutableListOf(
         Pony(
             id = 0,
@@ -71,8 +75,11 @@ class Ponies(private val observer: (ponies: List<Pony>) -> Unit) {
         }
     }
 
+    fun addObserver(observer: (items: List<Pony>) -> Unit) = observers.add(observer)
+    fun clearObservers() = observers.clear()
+
     private fun notifyObserver() {
-        observer.invoke(ponies)
+        observers.forEach { observer -> observer.invoke(ponies) }
     }
 
 }

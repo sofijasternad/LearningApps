@@ -5,6 +5,6 @@ import ru.freeit.ponylist.model.Ponies
 
 class App : Application() {
 
-
+    private val ponies by lazy { Ponies() }
 
 }
