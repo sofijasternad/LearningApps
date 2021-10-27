@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">PonyList</string>
+    <string name="starlight_glimmer">Starlight Glimmer</string>
+    <string name="unicorn">Unicorn</string>
+    <string name="twillight_sparkle">Twillight Sparkle</string>
+    <string name="alicorn">Alicorn</string>
+    <string name="rarity">Rarity</string>
+    <string name="starswirl">Starswirl</string>
+    <string name="apple_jack">Apple Jack</string>
+    <string name="ground_pony">Ground pony</string>
+    <string name="fluttershy">Fluttershy</string>
+    <string name="pegasus">Pegasus</string>
+    <string name="rainbow_dash">Rainbow Dash</string>
+    <string name="pinky_pie">Pinky Pie</string>
 </resources>
