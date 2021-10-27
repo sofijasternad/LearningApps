@@ -14,52 +14,45 @@ class Ponies {
             type = R.string.unicorn
         ),
         Pony(
-            id = 0,
+            id = 1,
             title = R.string.twillight_sparkle,
             img = R.drawable.twillight,
             type = R.string.alicorn
         ),
-        Pony(id = 0, title = R.string.rarity, img = R.drawable.rarity, type = R.string.unicorn),
+        Pony(id = 2, title = R.string.rarity, img = R.drawable.rarity, type = R.string.unicorn),
         Pony(
-            id = 0,
+            id = 3,
             title = R.string.starswirl,
             img = R.drawable.starswirl,
             type = R.string.unicorn
         ),
         Pony(
-            id = 0,
+            id = 4,
             title = R.string.apple_jack,
             img = R.drawable.apple_jack,
             type = R.string.ground_pony
         ),
         Pony(
-            id = 0,
+            id = 5,
             title = R.string.fluttershy,
             img = R.drawable.fluttershy,
             type = R.string.pegasus
         ),
         Pony(
-            id = 0,
+            id = 6,
             title = R.string.rainbow_dash,
             img = R.drawable.rainbow,
             type = R.string.pegasus
         ),
         Pony(
-            id = 0,
+            id = 7,
             title = R.string.pinky_pie,
             img = R.drawable.pinky,
             type = R.string.ground_pony
         ),
     )
 
-    private val ponies = mutableListOf(
-        Pony(
-            id = 0,
-            title = R.string.starlight_glimmer,
-            img = R.drawable.starlight,
-            type = R.string.unicorn
-        )
-    )
+    private val ponies = mutableListOf(allPonies.first())
 
     fun add() {
         if (ponies.size < allPonies.size) {
@@ -75,11 +68,16 @@ class Ponies {
         }
     }
 
-    fun addObserver(observer: (items: List<Pony>) -> Unit) = observers.add(observer)
+    fun addObserver(observer: (items: List<Pony>) -> Unit) {
+        observers.add(observer)
+        notifyObserver()
+    }
+
     fun clearObservers() = observers.clear()
 
     private fun notifyObserver() {
-        observers.forEach { observer -> observer.invoke(ponies) }
+        val copiedPonies = ponies.toList()
+        observers.forEach { observer -> observer.invoke(copiedPonies) }
     }
 
 }

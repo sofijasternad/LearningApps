@@ -24,6 +24,7 @@
         android:textColor="@color/purple_500"
         app:layout_constraintStart_toEndOf="@id/img"
         app:layout_constraintTop_toTopOf="@id/img"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="0dp"
         android:layout_height="wrap_content" />
 
@@ -34,6 +35,7 @@
         android:textSize="18sp"
         android:textColor="@color/purple_200"
         android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/name"
         app:layout_constraintStart_toEndOf="@id/img"
         android:layout_width="0dp"

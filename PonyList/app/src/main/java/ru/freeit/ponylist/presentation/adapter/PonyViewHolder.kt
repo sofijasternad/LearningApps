@@ -17,7 +17,8 @@ class PonyViewHolder(private val binding: PonyListItemBinding) : RecyclerView.Vi
     companion object {
         fun from(parent: ViewGroup) : PonyViewHolder {
             val inflater = LayoutInflater.from(parent.context)
-            return PonyViewHolder(PonyListItemBinding.inflate(inflater))
+            val item = PonyListItemBinding.inflate(inflater, parent, false)
+            return PonyViewHolder(item)
         }
     }
 

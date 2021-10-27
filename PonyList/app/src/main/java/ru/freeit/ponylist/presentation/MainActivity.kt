@@ -11,12 +11,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
 
+        setContentView(binding.root)
+
         val adapter = PonyAdapter()
         binding.ponyList.adapter = adapter
 
         val poniesModel = (application as App).ponies
         poniesModel.clearObservers()
-        poniesModel.addObserver {  ponies -> adapter.submitList(ponies) }
+        poniesModel.addObserver {  ponies ->
+            adapter.submitList(ponies)
+        }
 
         binding.addButton.setOnClickListener { poniesModel.add() }
         binding.removeButton.setOnClickListener { poniesModel.remove() }
