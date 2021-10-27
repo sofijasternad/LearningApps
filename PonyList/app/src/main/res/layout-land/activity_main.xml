@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pony_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_gravity="bottom|start"
+        android:text="@string/add"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/remove_button"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/remove"
+        android:layout_gravity="bottom|end" />
+
+</FrameLayout>

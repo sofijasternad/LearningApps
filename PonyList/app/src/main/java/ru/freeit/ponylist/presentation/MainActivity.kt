@@ -6,6 +6,7 @@ import ru.freeit.ponylist.core.App
 import ru.freeit.ponylist.databinding.ActivityMainBinding
 import ru.freeit.ponylist.presentation.adapter.PonyAdapter
 
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = PonyAdapter()
         binding.ponyList.adapter = adapter
+        binding.ponyList.addItemDecoration(SpacingDecoration(20))
 
         val poniesModel = (application as App).ponies
         poniesModel.clearObservers()
