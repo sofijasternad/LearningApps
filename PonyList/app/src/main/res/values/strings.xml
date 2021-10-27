@@ -12,4 +12,6 @@
     <string name="pegasus">Pegasus</string>
     <string name="rainbow_dash">Rainbow Dash</string>
     <string name="pinky_pie">Pinky Pie</string>
+    <string name="remove">remove</string>
+    <string name="add">add</string>
 </resources>
