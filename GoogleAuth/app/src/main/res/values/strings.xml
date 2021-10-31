@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GoogleAuth</string>
+    <string name="you_arent_in_account">Вы не вошли в Google аккаунт</string>
+    <string name="client_id">38733401275-826vi7u7l7h9op5ibs0ak3o7qh6khr08.apps.googleusercontent.com</string>
+    <string name="auth_error">Произошла ошибка при авторизации: %1$s</string>
+    <string name="user_data">Имя пользователя: %1$s\nemail: %2$s</string>
 </resources>
