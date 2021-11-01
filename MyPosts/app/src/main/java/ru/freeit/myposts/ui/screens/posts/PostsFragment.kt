@@ -1,4 +1,4 @@
-package ru.freeit.myposts.ui.screens
+package ru.freeit.myposts.ui.screens.posts
 
 import android.os.Bundle
 import android.view.LayoutInflater

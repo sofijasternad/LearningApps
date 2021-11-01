@@ -21,7 +21,7 @@ class MockApiPostsService {
 
     private val mockApiPostsUrl = "https://617f607b055276001774fa5f.mockapi.io/api/v3/posts"
 
-    fun fetchPosts() : List<Post> {
+    suspend fun fetchPosts() : List<Post> {
         val connection = URL(mockApiPostsUrl).openConnection() as HttpsURLConnection
         connection.requestMethod = "GET"
         connection.setRequestProperty("Accept", "application/json")
