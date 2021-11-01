@@ -1,5 +1,7 @@
 package ru.freeit.myposts.ui.screens.posts
 
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -11,9 +13,12 @@ class PostsViewModel(private val repo: PostsRepository) : CoroutineViewModel() {
 
     private val posts = LiveDataWrapper<PostsUi>()
 
+    fun state(lifecycleOwner: LifecycleOwner, observer: Observer<PostsUi>) = posts.observe(lifecycleOwner, observer)
+
     init {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
+                posts.changeValue(PostsUi.Loading)
                 posts.changeValue(repo.posts().ui())
             }
         }

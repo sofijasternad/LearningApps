@@ -3,11 +3,11 @@ package ru.freeit.myposts.data.model
 import org.json.JSONObject
 
 data class Post(
-    val id: String,
-    val createdAt: String,
-    val title: String,
-    val content: String,
-    val imageUrl: String
+    private val id: String,
+    private val createdAt: String,
+    private val title: String,
+    private val content: String,
+    private val imageUrl: String
 ) {
 
     private val timestampDelimiter = "T"
