@@ -1,4 +1,16 @@
 package ru.freeit.myposts.data.repo
 
-class PostsRepository {
+import ru.freeit.myposts.R
+import ru.freeit.myposts.data.webservices.MockApiPostsService
+
+class PostsRepository(private val service: MockApiPostsService) {
+
+    fun posts() : PostsResult {
+        return try {
+            val posts = service.fetchPosts()
+            PostsResult.Success(posts)
+        } catch (error: Exception) {
+            PostsResult.Error(R.string.missing_internet)
+        }
+    }
 }
