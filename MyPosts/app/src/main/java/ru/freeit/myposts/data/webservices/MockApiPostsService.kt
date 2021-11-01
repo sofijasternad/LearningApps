@@ -32,6 +32,7 @@ class MockApiPostsService {
                 jsonContent.append(line.trim())
                 line = reader.readLine()
             }
+
             connection.disconnect()
             val postsJson = JSONArray(jsonContent.toString())
             return postsJson.mapJsonObjects().map { postJson ->

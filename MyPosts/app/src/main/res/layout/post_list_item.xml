@@ -4,12 +4,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/post_img"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -17,7 +19,7 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/post_title"
         android:layout_width="0dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:textSize="20sp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +29,6 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/post_content"
         android:layout_width="0dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:textSize="18sp"
         android:layout_height="wrap_content"
@@ -38,7 +39,6 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/post_created_date"
         android:layout_width="0dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:textSize="18sp"
         android:textAlignment="textEnd"

@@ -17,10 +17,11 @@ class PostsViewModel(private val repo: PostsRepository) : CoroutineViewModel() {
 
     init {
         viewModelScope.launch {
-            withContext(Dispatchers.IO) {
-                posts.changeValue(PostsUi.Loading)
-                posts.changeValue(repo.posts().ui())
+            posts.changeValue(PostsUi.Loading)
+            val postsUi = withContext(Dispatchers.IO) {
+                repo.posts().ui()
             }
+            posts.changeValue(postsUi)
         }
     }
 
