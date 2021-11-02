@@ -1,5 +1,6 @@
 package ru.freeit.googlemaps.ui.screens
 
+import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,19 +8,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import ru.freeit.googlemaps.R
 import ru.freeit.googlemaps.databinding.MapFragmentBinding
 
-class MyMapFragment : Fragment() {
+class GoogleMapFragment : CommonMapFragment() {
 
-    private lateinit var mapView: MapView
     private var googleMap: GoogleMap? = null
 
     private fun defineLocation() {
@@ -43,7 +41,7 @@ class MyMapFragment : Fragment() {
         val binding = MapFragmentBinding.inflate(inflater, container, false)
         this.mapView = binding.mapView
 
-        mapView.onCreate(savedInstanceState)
+        binding.mapView.onCreate(savedInstanceState)
 
         val permissionLocation = registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
             if (isGranted) {
@@ -63,7 +61,7 @@ class MyMapFragment : Fragment() {
             }
         }
 
-        mapView.getMapAsync { googleMap ->
+        binding.mapView.getMapAsync { googleMap ->
             this.googleMap = googleMap
             val sydney = LatLng(-34.0, 151.0)
             googleMap.addMarker(MarkerOptions().apply {
@@ -76,39 +74,4 @@ class MyMapFragment : Fragment() {
         return binding.root
     }
 
-
-    override fun onStart() {
-        super.onStart()
-        mapView.onStart()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        mapView.onResume()
-    }
-
-    override fun onPause() {
-        super.onPause()
-        mapView.onPause()
-    }
-
-    override fun onStop() {
-        super.onStop()
-        mapView.onStop()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        mapView.onDestroy()
-    }
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        mapView.onSaveInstanceState(outState)
-    }
-
-    override fun onLowMemory() {
-        super.onLowMemory()
-        mapView.onLowMemory()
-    }
 }
