@@ -27,6 +27,9 @@ class NotesScreen : Fragment() {
             // TODO добавить notes в список
         }
 
+        binding.addNoteButton.setOnClickListener {
+
+        }
 
         return binding.root
     }
