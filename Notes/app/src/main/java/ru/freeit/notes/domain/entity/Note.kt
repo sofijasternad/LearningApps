@@ -7,7 +7,8 @@ data class Note(
     private val id: Long = 0,
     private val title: String = "",
     private val createdDate: Long = System.currentTimeMillis(),
-    private val editedDate: Long = System.currentTimeMillis()
+    private val editedDate: Long = System.currentTimeMillis(),
+    private val tags: List<Tag> = listOf()
 ) {
 
     fun id() = id

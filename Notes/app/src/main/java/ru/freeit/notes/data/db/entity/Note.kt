@@ -5,6 +5,7 @@ import ru.freeit.notes.domain.entity.Note as DomainNote
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.Relation
 
 @Entity(tableName = "notes")
 data class Note(
@@ -14,7 +15,7 @@ data class Note(
     @ColumnInfo(name = "edited_date")
     val editedDate: Long = System.currentTimeMillis(),
     @PrimaryKey(autoGenerate = true)
-    var id: Long = 0L,
+    var id: Long = 0L
 ) {
 
     fun toDomain() = DomainNote(id, title, createdDate, editedDate)
