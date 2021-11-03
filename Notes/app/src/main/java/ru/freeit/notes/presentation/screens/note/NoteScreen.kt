@@ -15,12 +15,9 @@ import ru.freeit.notes.presentation.MainActivity
 class NoteScreen : Fragment() {
 
     companion object {
-        fun newInstance(noteId: Long) : NoteScreen {
-            val noteScreen = NoteScreen()
-            noteScreen.arguments = bundleOf(
-              "note_id_key" to noteId
-            )
-            return noteScreen
+        private const val noteIdKey = "note_id_key"
+        fun newInstance(noteId: Long) = NoteScreen().apply {
+            arguments = bundleOf(noteIdKey to noteId)
         }
     }
 
@@ -33,11 +30,10 @@ class NoteScreen : Fragment() {
 
         (requireActivity() as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val noteId = requireArguments().getLong("note_id_key", -1L)
+        val noteId = requireArguments().getLong(noteIdKey, -1L)
 
         val repo = (requireContext().applicationContext as App).repo
-        val viewModel = ViewModelProvider(this, NoteViewModelFactory(noteId, repo))
-            .get(NoteViewModel::class.java)
+        val viewModel = ViewModelProvider(this, NoteViewModelFactory(noteId, repo)).get(NoteViewModel::class.java)
 
         viewModel.observeStatus(viewLifecycleOwner) { status ->
             when (status) {

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import ru.freeit.notes.R
 import ru.freeit.notes.core.App
+import ru.freeit.notes.core.FragmentManagerWrapper
 import ru.freeit.notes.databinding.NotesScreenBinding
 import ru.freeit.notes.domain.entity.Note
 import ru.freeit.notes.presentation.MainActivity
@@ -28,32 +29,19 @@ class NotesScreen : Fragment() {
         viewModel = ViewModelProvider(this, NotesViewModelFactory(this, savedInstanceState, repo))
             .get(NotesViewModel::class.java)
 
-        val adapter = NotesAdapter(object: NoteListItemCallback {
-            override fun remove(note: Note) {
-                viewModel.remove(note)
-            }
+        val fragmentManagerWrapper = FragmentManagerWrapper(parentFragmentManager)
 
-            override fun edit(note: Note) {
-                parentFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container, NoteScreen.newInstance(note.id()))
-                    .addToBackStack(null)
-                    .commit()
-            }
+        val adapter = NotesAdapter(object: NoteListItemCallback {
+            override fun remove(note: Note) = viewModel.remove(note)
+            override fun edit(note: Note) = fragmentManagerWrapper.replace(NoteScreen.newInstance(note.id()))
         })
 
         binding.noteList.adapter = adapter
 
         viewModel.init()
-        viewModel.observeNotes(viewLifecycleOwner) { notes ->
-            adapter.submitList(notes)
-        }
+        viewModel.observeNotes(viewLifecycleOwner, adapter::submitList)
 
-        binding.addNoteButton.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, NoteScreen())
-                .addToBackStack(null)
-                .commit()
-        }
+        binding.addNoteButton.setOnClickListener { fragmentManagerWrapper.replace(NoteScreen()) }
 
         setHasOptionsMenu(true)
 
