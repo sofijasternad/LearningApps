@@ -1,15 +1,18 @@
 package ru.freeit.notes.data.repository
 
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import ru.freeit.notes.data.db.AppDatabase
 import ru.freeit.notes.domain.entity.Note
 import ru.freeit.notes.domain.repository.NoteRepository
 import ru.freeit.notes.domain.repository.SortingType
 
-class NoteRepositoryImpl(appDatabase: AppDatabase) : NoteRepository {
+class NoteRepositoryImpl(appDatabase: AppDatabase, private val dispatcher: CoroutineDispatcher = Dispatchers.IO) : NoteRepository {
 
     private val noteDao = appDatabase.noteDao()
 
-    override suspend fun notesBy(sortingType: SortingType): List<Note> {
+    override suspend fun notesBy(sortingType: SortingType) = withContext(dispatcher) {
         val dbNotes =  when (sortingType) {
             SortingType.TITLE -> {
                 noteDao.notesByTitle()
@@ -21,10 +24,10 @@ class NoteRepositoryImpl(appDatabase: AppDatabase) : NoteRepository {
                 noteDao.notesByEditedDate()
             }
         }
-        return dbNotes.map { note -> note.toDomain() }
+        dbNotes.map { note -> note.toDomain() }
     }
 
-    override suspend fun add(note: Note) = noteDao.add(note.toDb())
-    override suspend fun remove(note: Note) = noteDao.remove(note.toDb())
-    override suspend fun update(note: Note) = noteDao.update(note.toDb())
+    override suspend fun add(note: Note) = withContext(dispatcher) { noteDao.add(note.toDb()) }
+    override suspend fun remove(note: Note) = withContext(dispatcher) { noteDao.remove(note.toDb()) }
+    override suspend fun update(note: Note) = withContext(dispatcher) { noteDao.update(note.toDb()) }
 }
