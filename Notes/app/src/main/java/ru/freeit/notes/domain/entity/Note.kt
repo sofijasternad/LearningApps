@@ -1,5 +1,6 @@
 package ru.freeit.notes.domain.entity
 
+import java.util.*
 import ru.freeit.notes.data.db.entity.Note as DbNote
 
 data class Note(
@@ -9,7 +10,12 @@ data class Note(
     private val editedDate: Long = System.currentTimeMillis()
 ) {
 
+    fun id() = id
+    fun title() = title
+    fun lastEdited() : String {
+        val calendar = Calendar.getInstance()
+        calendar.time = Date(editedDate)
+        return "${calendar.get(Calendar.DAY_OF_MONTH)}.${calendar.get(Calendar.MONTH)}.${calendar.get(Calendar.YEAR)}"
+    }
     fun toDb() = DbNote(title, createdDate, editedDate, id)
-
-    // TODO дополнительная функциональность
 }

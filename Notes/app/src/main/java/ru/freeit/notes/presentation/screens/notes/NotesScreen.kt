@@ -24,9 +24,12 @@ class NotesScreen : Fragment() {
         val viewModel = ViewModelProvider(this, NotesViewModelFactory(this, savedInstanceState, repo))
             .get(NotesViewModel::class.java)
 
+        val adapter = NotesAdapter()
+        binding.noteList.adapter = adapter
+
         viewModel.init()
         viewModel.observeNotes(viewLifecycleOwner) { notes ->
-            // TODO добавить notes в список
+            adapter.submitList(notes)
         }
 
         binding.addNoteButton.setOnClickListener {
