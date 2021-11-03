@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/note_list_item.xml",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/layout/note_list_item.xml"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/notes_screen.xml",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/layout/notes_screen.xml"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/note_screen.xml",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/layout/note_screen.xml"
+    }
+]

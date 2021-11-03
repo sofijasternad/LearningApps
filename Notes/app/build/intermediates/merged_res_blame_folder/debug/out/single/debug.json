@@ -1,0 +1,98 @@
+[
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/layout_note_list_item.xml.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/layout/note_list_item.xml"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/menu_sorting_menu.xml.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/menu/sorting_menu.xml"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/drawable_ic_add_24.xml.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/drawable/ic_add_24.xml"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/drawable_ic_delete_24.xml.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/drawable/ic_delete_24.xml"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/drawable_ic_date_24.xml.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/drawable/ic_date_24.xml"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/drawable_title_bg.xml.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/drawable/title_bg.xml"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/layout_notes_screen.xml.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/layout/notes_screen.xml"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/layout_note_screen.xml.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/layout/note_screen.xml"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/layout_activity_main.xml.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/drawable_ic_edit_24.xml.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/drawable/ic_edit_24.xml"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    }
+]
