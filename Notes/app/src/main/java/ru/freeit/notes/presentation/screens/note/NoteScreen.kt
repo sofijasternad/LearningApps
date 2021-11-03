@@ -30,8 +30,7 @@ class NoteScreen : Fragment() {
 
         (requireActivity() as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val noteId = requireArguments().getLong(noteIdKey, -1L)
-
+        val noteId = arguments?.getLong(noteIdKey, -1L) ?: -1L
         val repo = (requireContext().applicationContext as App).repo
         val viewModel = ViewModelProvider(this, NoteViewModelFactory(noteId, repo)).get(NoteViewModel::class.java)
 

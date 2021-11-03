@@ -8,4 +8,5 @@
     <string name="create_date_sorting" >по дате создания</string>
     <string name="edited_date_sorting">по дате редактирования</string>
     <string name="save">сохранить</string>
+    <string name="tag">тэг</string>
 </resources>
