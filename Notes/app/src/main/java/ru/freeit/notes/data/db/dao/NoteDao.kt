@@ -7,21 +7,21 @@ import ru.freeit.notes.data.db.entity.Note
 interface NoteDao {
 
     @Query("select * from notes order by created_date")
-    fun notesByCreatedDate() : List<Note>
+    suspend fun notesByCreatedDate() : List<Note>
 
     @Query("select * from notes order by edited_date")
-    fun notesByEditedDate() : List<Note>
+    suspend fun notesByEditedDate() : List<Note>
 
     @Query("select * from notes order by title")
-    fun notesByTitle() : List<Note>
+    suspend fun notesByTitle() : List<Note>
 
     @Insert
-    fun add(note: Note)
+    suspend fun add(note: Note)
 
     @Delete
-    fun remove(note: Note)
+    suspend fun remove(note: Note)
 
     @Update
-    fun update(note: Note)
+    suspend fun update(note: Note)
 
 }
