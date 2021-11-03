@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Notes</string>
     <string name="add">Добавить</string>
+    <string name="title_is_empty">заметка пуста</string>
 </resources>

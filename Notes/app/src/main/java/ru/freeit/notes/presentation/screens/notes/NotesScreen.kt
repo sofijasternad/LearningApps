@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import ru.freeit.notes.R
 import ru.freeit.notes.core.App
 import ru.freeit.notes.databinding.NotesScreenBinding
+import ru.freeit.notes.presentation.screens.note.NoteScreen
 
 class NotesScreen : Fragment() {
 
@@ -28,7 +30,10 @@ class NotesScreen : Fragment() {
         }
 
         binding.addNoteButton.setOnClickListener {
-
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, NoteScreen())
+                .addToBackStack(null)
+                .commit()
         }
 
         return binding.root
