@@ -50,6 +50,7 @@ dependencies {
 
     // Room - обертка для SQLite с большим функционалом
     implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
     kapt("androidx.room:room-compiler:$roomVersion")
 
     // Kotlin Coroutines - библиотека для реализации ассинхронного выполнения кода без блокировок

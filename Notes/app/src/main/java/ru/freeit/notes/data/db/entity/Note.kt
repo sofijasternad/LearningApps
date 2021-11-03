@@ -8,13 +8,13 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "notes")
 data class Note(
-    private val title: String = "",
+    val title: String = "",
     @ColumnInfo(name = "created_date")
-    private val createdDate: Long = System.currentTimeMillis(),
+    val createdDate: Long = System.currentTimeMillis(),
     @ColumnInfo(name = "edited_date")
-    private val editedDate: Long = System.currentTimeMillis(),
+    val editedDate: Long = System.currentTimeMillis(),
     @PrimaryKey(autoGenerate = true)
-    private var id: Long = 0L,
+    var id: Long = 0L,
 ) {
 
     fun toDomain() = DomainNote(id, title, createdDate, editedDate)
