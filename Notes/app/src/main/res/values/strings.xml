@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">Notes</string>
+    <string name="app_name">Заметки</string>
     <string name="add">Добавить</string>
     <string name="title_is_empty">заметка пуста</string>
+    <string name="title_note">Текст, текст, ...</string>
+    <string name="no_sorting">не сортировать</string>
+    <string name="title_sorting">по тексту</string>
+    <string name="create_date_sorting" >по дате создания</string>
+    <string name="edited_date_sorting">по дате редактирования</string>
+    <string name="save">сохранить</string>
 </resources>

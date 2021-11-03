@@ -15,6 +15,12 @@ interface NoteDao {
     @Query("select * from notes order by title")
     suspend fun notesByTitle() : List<Note>
 
+    @Query("select * from notes")
+    suspend fun notes() : List<Note>
+
+    @Query("select * from notes where id = :id")
+    suspend fun noteBy(id: Long) : Note
+
     @Insert
     suspend fun add(note: Note)
 

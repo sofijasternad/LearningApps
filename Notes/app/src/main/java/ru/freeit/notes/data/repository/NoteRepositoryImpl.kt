@@ -23,11 +23,15 @@ class NoteRepositoryImpl(appDatabase: AppDatabase, private val dispatcher: Corou
             SortingType.EDITED_DATE -> {
                 noteDao.notesByEditedDate()
             }
+            SortingType.NO_SORTING -> {
+                noteDao.notes()
+            }
         }
         dbNotes.map { note -> note.toDomain() }
     }
 
     override suspend fun add(note: Note) = withContext(dispatcher) { noteDao.add(note.toDb()) }
+    override suspend fun noteBy(noteId: Long) = withContext(dispatcher) { noteDao.noteBy(noteId).toDomain() }
     override suspend fun remove(note: Note) = withContext(dispatcher) { noteDao.remove(note.toDb()) }
     override suspend fun update(note: Note) = withContext(dispatcher) { noteDao.update(note.toDb()) }
 }

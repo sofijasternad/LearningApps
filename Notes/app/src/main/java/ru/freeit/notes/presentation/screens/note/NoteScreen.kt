@@ -4,13 +4,25 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import ru.freeit.notes.R
 import ru.freeit.notes.core.App
 import ru.freeit.notes.databinding.NoteScreenBinding
+import ru.freeit.notes.presentation.MainActivity
 
 class NoteScreen : Fragment() {
+
+    companion object {
+        fun newInstance(noteId: Long) : NoteScreen {
+            val noteScreen = NoteScreen()
+            noteScreen.arguments = bundleOf(
+              "note_id_key" to noteId
+            )
+            return noteScreen
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -19,16 +31,25 @@ class NoteScreen : Fragment() {
     ): View {
         val binding = NoteScreenBinding.inflate(inflater)
 
+        (requireActivity() as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        val noteId = requireArguments().getLong("note_id_key", -1L)
+
         val repo = (requireContext().applicationContext as App).repo
-        val viewModel = ViewModelProvider(this, NoteViewModelFactory(repo))
+        val viewModel = ViewModelProvider(this, NoteViewModelFactory(noteId, repo))
             .get(NoteViewModel::class.java)
 
-        viewModel.observeStatus(viewLifecycleOwner) { addedStatus ->
-            when (addedStatus) {
-                AddNoteStatus.EMPTY_TITLE -> {
+        viewModel.observeStatus(viewLifecycleOwner) { status ->
+            when (status) {
+                is NoteStatus.TitleEmpty -> {
                     binding.titleEdit.error = getString(R.string.title_is_empty)
                 }
-                AddNoteStatus.SUCCESS_ADDED -> {
+                is NoteStatus.AlreadyAdded -> {
+                    binding.titleEdit.setText(status.title())
+                    binding.applyButton.text = getString(R.string.save)
+                }
+                is NoteStatus.SuccessAdded,
+                is NoteStatus.SuccessEdited -> {
                     parentFragmentManager.popBackStack()
                 }
             }

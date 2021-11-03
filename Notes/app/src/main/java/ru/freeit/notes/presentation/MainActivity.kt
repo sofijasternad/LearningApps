@@ -2,6 +2,7 @@ package ru.freeit.notes.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import ru.freeit.notes.R
 import ru.freeit.notes.presentation.screens.notes.NotesScreen
 
@@ -15,5 +16,14 @@ class MainActivity : AppCompatActivity() {
                 .add(R.id.fragment_container, NotesScreen())
                 .commit()
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            onBackPressed()
+            return true
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }

@@ -25,9 +25,21 @@ class NotesViewModel(
         notes.observe(owner, observer)
     }
 
+    fun remove(note: Note) {
+        viewModelScope.launch {
+            repo.remove(note)
+            notes.changeValue(repo.notesBy(sortingType))
+        }
+    }
+
     fun init() {
-        val sortingName = savedStateHandle[sortingKey] ?: SortingType.TITLE.name
+        val sortingName = savedStateHandle[sortingKey] ?: SortingType.NO_SORTING.name
         sortingType = SortingType.valueOf(sortingName)
+        fetchNotes()
+    }
+
+    fun sortDefault() {
+        sortingType = SortingType.NO_SORTING
         fetchNotes()
     }
 
