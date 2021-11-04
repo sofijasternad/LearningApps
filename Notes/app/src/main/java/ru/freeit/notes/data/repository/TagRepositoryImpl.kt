@@ -24,11 +24,13 @@ class TagRepositoryImpl(
         }
     }
 
+    override suspend fun removeBy(noteId: Long) = withContext(dispatcher) { tagDao.removeBy(noteId) }
     override fun add(tag: Tag) { tagsToBeAdded.add(tag) }
     override fun tags() = tagsToBeAdded
 
     override suspend fun apply(noteId: Long) = withContext(dispatcher) {
         tagsToBeAdded.forEach { tag -> tagDao.add(tag.copy(noteId = noteId).toDb()) }
+        tagsToBeAdded.clear()
     }
 
 }

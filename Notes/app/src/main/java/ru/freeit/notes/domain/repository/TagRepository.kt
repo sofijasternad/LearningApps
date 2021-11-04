@@ -6,5 +6,6 @@ interface TagRepository {
     suspend fun remove(tag: Tag)
     fun add(tag: Tag)
     fun tags() : List<Tag>
+    suspend fun removeBy(noteId: Long)
     suspend fun apply(noteId: Long)
 }

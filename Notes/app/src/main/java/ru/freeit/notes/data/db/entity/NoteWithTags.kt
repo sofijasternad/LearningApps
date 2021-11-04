@@ -7,7 +7,7 @@ data class NoteWithTags(
     @Embedded val note: Note,
     @Relation(
         parentColumn = "id",
-        entityColumn = "noteId"
+        entityColumn = "note_id"
     )
     val tags: List<Tag>
 ) {

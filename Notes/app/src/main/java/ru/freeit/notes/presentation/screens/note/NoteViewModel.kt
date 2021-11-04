@@ -54,7 +54,7 @@ class NoteViewModel(
     private fun edit(title: String) {
         viewModelScope.launch {
             val note = noteRepo.noteBy(noteId)
-            noteRepo.update(note.copy(title = title))
+            noteRepo.update(note.copy(title = title, editedDate = System.currentTimeMillis()))
             tagRepo.apply(noteId)
             status.changeValue(NoteStatus.SuccessEdited)
         }

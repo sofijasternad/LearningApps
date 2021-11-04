@@ -6,13 +6,14 @@ import androidx.lifecycle.SavedStateHandle
 import kotlinx.coroutines.launch
 import ru.freeit.notes.core.CoroutineViewModel
 import ru.freeit.notes.core.LiveDataWrapper
-import ru.freeit.notes.data.db.AppDatabase
 import ru.freeit.notes.domain.entity.Note
 import ru.freeit.notes.domain.repository.NoteRepository
 import ru.freeit.notes.domain.repository.SortingType
+import ru.freeit.notes.domain.repository.TagRepository
 
 class NotesViewModel(
-    private val repo: NoteRepository,
+    private val noteRepo: NoteRepository,
+    private val tagRepo: TagRepository,
     private val savedStateHandle: SavedStateHandle
 ) : CoroutineViewModel() {
 
@@ -27,8 +28,9 @@ class NotesViewModel(
 
     fun remove(note: Note) {
         viewModelScope.launch {
-            repo.remove(note)
-            notes.changeValue(repo.notesBy(sortingType))
+            noteRepo.remove(note)
+            tagRepo.removeBy(note.id())
+            notes.changeValue(noteRepo.notesBy(sortingType))
         }
     }
 
@@ -61,7 +63,7 @@ class NotesViewModel(
     private fun fetchNotes() {
         viewModelScope.launch {
             savedStateHandle[sortingKey] = sortingType.name
-            notes.changeValue(repo.notesBy(sortingType))
+            notes.changeValue(noteRepo.notesBy(sortingType))
         }
     }
 
