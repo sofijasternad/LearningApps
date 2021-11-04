@@ -1,9 +1,13 @@
 package ru.freeit.notes.presentation.screens.notes
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context.CLIPBOARD_SERVICE
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.snackbar.Snackbar
 import ru.freeit.notes.R
 import ru.freeit.notes.core.App
 import ru.freeit.notes.core.FragmentManagerWrapper
@@ -32,9 +36,16 @@ class NotesScreen : Fragment() {
 
         val fragmentManagerWrapper = FragmentManagerWrapper(parentFragmentManager)
 
+        val clipboardService = requireContext().getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+
         val adapter = NotesAdapter(object: NoteListItemCallback {
             override fun remove(note: Note) = viewModel.remove(note)
             override fun edit(note: Note) = fragmentManagerWrapper.replace(NoteScreen.newInstance(note.id()))
+            override fun copyClipboard(title: String) {
+                val clipData = ClipData.newPlainText(getString(R.string.note), title)
+                clipboardService.setPrimaryClip(clipData)
+                Snackbar.make(binding.root, R.string.copy_success, Snackbar.LENGTH_SHORT).show()
+            }
         })
 
         binding.noteList.adapter = adapter

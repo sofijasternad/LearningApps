@@ -14,4 +14,6 @@
     <string name="cancel">отмена</string>
     <string name="add_tag"><b>Добавить тэг</b></string>
     <string name="tag_is_empty">Пустой тэг</string>
+    <string name="note">заметка</string>
+    <string name="copy_success">Скопировано успешно</string>
 </resources>

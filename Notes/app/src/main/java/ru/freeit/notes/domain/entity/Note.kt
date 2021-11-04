@@ -20,7 +20,14 @@ data class Note(
     fun lastEdited() : String {
         val calendar = Calendar.getInstance()
         calendar.time = Date(editedDate)
-        return "${calendar.get(Calendar.DAY_OF_MONTH)}.${calendar.get(Calendar.MONTH)}.${calendar.get(Calendar.YEAR)}"
+        val dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH)
+            .toString()
+            .padStart(2, '0')
+        val month = calendar.get(Calendar.MONTH)
+            .toString()
+            .padStart(2, '0')
+        val year = calendar.get(Calendar.YEAR)
+        return "$dayOfMonth.$month.$year"
     }
     fun toDb() = DbNote(title, createdDate, editedDate, id)
 }

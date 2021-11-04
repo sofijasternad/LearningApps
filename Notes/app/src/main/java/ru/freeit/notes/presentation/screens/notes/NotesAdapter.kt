@@ -12,6 +12,7 @@ import ru.freeit.notes.domain.entity.Note
 interface NoteListItemCallback {
     fun remove(note: Note)
     fun edit(note: Note)
+    fun copyClipboard(title: String)
 }
 
 class NotesAdapter(private var callback: NoteListItemCallback) : ListAdapter<Note, NotesAdapter.NotesViewHolder>(NoteDiffUtilCallback()) {
@@ -28,7 +29,13 @@ class NotesAdapter(private var callback: NoteListItemCallback) : ListAdapter<Not
             binding.removeButton.setOnClickListener {
                 callback.remove(note)
             }
+            binding.copyButton.setOnClickListener {
+                callback.copyClipboard(note.title())
+            }
             binding.editButton.setOnClickListener {
+                callback.edit(note)
+            }
+            binding.root.setOnClickListener {
                 callback.edit(note)
             }
             val tagsString = note.tagsString()
