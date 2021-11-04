@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import ru.freeit.notes.R
 import ru.freeit.notes.databinding.NoteListItemBinding
 import ru.freeit.notes.domain.entity.Note
 
@@ -22,13 +23,17 @@ class NotesAdapter(private var callback: NoteListItemCallback) : ListAdapter<Not
 
     class NotesViewHolder(private val binding: NoteListItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(note: Note, callback: NoteListItemCallback) {
-            binding.titleText.text = note.title()
-            binding.removeButton.setOnClick {
+        fun bind(index: Int, note: Note, callback: NoteListItemCallback) {
+            binding.titleText.text = "${index + 1}. ${note.title().trim()}"
+            binding.removeButton.setOnClickListener {
                 callback.remove(note)
             }
-            binding.editButton.setOnClick {
+            binding.editButton.setOnClickListener {
                 callback.edit(note)
+            }
+            val tagsString = note.tagsString()
+            if (tagsString.isNotEmpty()) {
+                binding.tagsText.text = binding.titleText.context.getString(R.string.tags, note.tagsString())
             }
             binding.editedDateText.text = note.lastEdited()
         }
@@ -40,6 +45,6 @@ class NotesAdapter(private var callback: NoteListItemCallback) : ListAdapter<Not
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = NotesViewHolder.from(parent)
-    override fun onBindViewHolder(holder: NotesViewHolder, position: Int) = holder.bind(getItem(position), callback)
+    override fun onBindViewHolder(holder: NotesViewHolder, position: Int) = holder.bind(position, getItem(position), callback)
 
 }

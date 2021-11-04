@@ -11,6 +11,9 @@ data class Note(
     private val tags: List<Tag> = listOf()
 ) {
 
+    fun tagsString() = tags.joinToString(", ") { tag ->
+        tag.title
+    }
     fun id() = id
     fun title() = title
     fun lastEdited() : String {

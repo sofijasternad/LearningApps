@@ -9,4 +9,5 @@
     <string name="edited_date_sorting">по дате редактирования</string>
     <string name="save">сохранить</string>
     <string name="tag">тэг</string>
+    <string name="tags">Тэги: %1$s</string>
 </resources>
