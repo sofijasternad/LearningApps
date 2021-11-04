@@ -12,5 +12,5 @@ data class Tag(
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0L
 ) {
-    fun toDomain() = DomainTag(id, title, noteId)
+    fun toDomain() = DomainTag(title, noteId)
 }

@@ -14,6 +14,7 @@ data class Note(
     fun tagsString() = tags.joinToString(", ") { tag ->
         tag.title
     }
+    fun tags() = tags
     fun id() = id
     fun title() = title
     fun lastEdited() : String {

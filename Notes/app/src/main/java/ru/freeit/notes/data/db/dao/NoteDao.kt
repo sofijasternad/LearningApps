@@ -28,7 +28,7 @@ interface NoteDao {
     suspend fun noteBy(id: Long) : NoteWithTags
 
     @Insert
-    suspend fun add(note: Note)
+    suspend fun add(note: Note) : Long
 
     @Delete
     suspend fun remove(note: Note)

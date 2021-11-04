@@ -10,4 +10,8 @@
     <string name="save">сохранить</string>
     <string name="tag">тэг</string>
     <string name="tags">Тэги: %1$s</string>
+    <string name="ok">OK</string>
+    <string name="cancel">отмена</string>
+    <string name="add_tag"><b>Добавить тэг</b></string>
+    <string name="tag_is_empty">Пустой тэг</string>
 </resources>

@@ -10,4 +10,5 @@ class LiveDataWrapper<T> {
     fun changeValue(value: T) {
         liveData.value = value
     }
+    fun value() = liveData.value
 }
