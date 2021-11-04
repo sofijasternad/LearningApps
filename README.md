@@ -53,8 +53,8 @@
 
 <table>
   <tr>
-    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/MyPosts/screens/screen1.png" /></td>
-    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/MyPosts/screens/screen2.png" /></td>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/MyPosts/screens/screen10.png" /></td>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/MyPosts/screens/screen20.png" /></td>
   </tr>
 </table>
 
