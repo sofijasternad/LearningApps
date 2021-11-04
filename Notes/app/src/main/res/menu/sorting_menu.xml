@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/no_sorting"
+        android:title="@string/no_sorting" />
+
+    <item
+        android:id="@+id/title_sorting"
+        android:title="@string/title_sorting" />
+
+    <item
+        android:id="@+id/create_date_sorting"
+        android:title="@string/create_date_sorting" />
+
+    <item
+        android:id="@+id/edited_date_sorting"
+        android:title="@string/edited_date_sorting" />
+</menu>

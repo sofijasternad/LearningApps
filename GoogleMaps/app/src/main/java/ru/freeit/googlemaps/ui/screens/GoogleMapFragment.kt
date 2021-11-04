@@ -31,6 +31,7 @@ class GoogleMapFragment : CommonMapFragment() {
             googleMap?.moveCamera(CameraUpdateFactory.newLatLng(point))
         }
 
+
     }
 
     override fun onCreateView(
