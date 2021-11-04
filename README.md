@@ -7,7 +7,7 @@
 Приложения по темам:
 
 1. [PersonalApp](https://github.com/KiberneticWorm/LearningApps/tree/master/PersonalApp) - создание проекта, изменение иконки и цветов приложения, создание круглого изображения, разметка в <code>ConstraintLayout</code>, обработка нажатия на кнопку и показ <code>Snackbar</code>
-2. [Tapper](https://github.com/KiberneticWorm/LearningApps/tree/master/Tapper) - архитектура <code>MVC</code>, упрощенный вид паттерна <code>Observer</code>, создание кастомного <code>View</code> и работа с <code>SharedPreferences</code>
+2. [Tapper](https://github.com/KiberneticWorm/LearningApps/tree/master/Tapper) - архитектура <code>MVC</code>, упрощенный вид паттерна <code>Observer</code>, создание кастомного <code>View</code> с красивой анимацией и работа с <code>SharedPreferences</code> для сохранения счета
 3. [PonyList](https://github.com/KiberneticWorm/LearningApps/tree/master/PonyList) - работа со списком <code>RecyclerView</code> и адаптером <code>ListAdapter</code>, а также с аниматорами и декораторами списков
 4. [GoogleAuth](https://github.com/KiberneticWorm/LearningApps/tree/master/GoogleAuth) - подключение Firebase к проекту, добавление Google авторизации, получение данных аккаунта и выход из него 
 5. [AliExpress](https://github.com/KiberneticWorm/LearningApps/tree/master/AliExpress) - работа с <code>WebView</code>, добавление навигации по сайту через кнопку назад и поддеркжа <code>JavaScript</code> кода 
