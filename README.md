@@ -13,6 +13,20 @@
 5. [AliExpress](https://github.com/KiberneticWorm/LearningApps/tree/master/AliExpress) - работа с <code>WebView</code>, добавление навигации по сайту через кнопку назад и поддеркжа <code>JavaScript</code> кода 
 6. [GoogleMaps](https://github.com/KiberneticWorm/LearningApps/tree/master/GoogleMaps) - работа с Google картами и определение местоположения пользователя
 
+## Как начать?
+
+Загрузите мой репозиторий:
+
+    git clone https://github.com/KiberneticWorm/LearningApps.git
+  
+Откройте любой из проектов в Android Studio:
+
+![открытие проекта в Android Studio](https://github.com/KiberneticWorm/LearningApps/blob/master/screens/learning_apps.png)
+
+Подождите, пока установятся все зависимости.
+
+Запускайте и чекайте код :)
+
 ## Скрины
 
 <table>
