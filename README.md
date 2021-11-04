@@ -29,6 +29,24 @@
   </tr>
 </table>
 
+<table>
+  <tr>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/Notes/screens/screen1.png" /></td>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/Notes/screens/screen2.png" /></td>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/Notes/screens/screen3.png" /></td>
+  </tr>  
+  <tr>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/Notes/screens/screen4.png" /></td>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/Notes/screens/screen5.png" /></td>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/Notes/screens/screen6.png" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/Notes/screens/screen7.png" /></td>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/Notes/screens/screen8.png" /></td>
+    
+  </tr>
+</table> 
+
 <table border="0">
   <tr style="border: none">
     <td style="border: none"><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/PersonalApp/screenshots/screen1.png" height="600px" /></td>
@@ -53,8 +71,8 @@
 
 <table>
   <tr>
-    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/MyPosts/screens/screen1.png" /></td>
-    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/MyPosts/screens/screen2.png" /></td>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/MyPosts/screens/screen10.png" /></td>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/MyPosts/screens/screen20.png" /></td>
   </tr>
 </table>
 
