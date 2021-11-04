@@ -1,5 +1,7 @@
 # LearningApps
 
+<img src="https://www.ixbt.com/img/n1/news/2021/4/4/Android-Lollipop-at-Google-HQ_large.jpg" />
+
 Проект LearningApps содержит в себе различные приложения, в каждом из которых проработано несколько тем по Android разработке.
 
 Дополнительно к каждому приложению прилагается отдельный файл README.md
