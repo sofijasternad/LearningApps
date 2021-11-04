@@ -16,6 +16,7 @@ import ru.freeit.notes.domain.entity.Note
 import ru.freeit.notes.presentation.MainActivity
 import ru.freeit.notes.presentation.screens.note.NoteScreen
 
+
 class NotesScreen : Fragment() {
 
     private lateinit var viewModel: NotesViewModel
@@ -27,12 +28,9 @@ class NotesScreen : Fragment() {
     ): View {
         val binding = NotesScreenBinding.inflate(inflater)
 
-        (requireActivity() as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
-
-        val noteRepo = (requireContext().applicationContext as App).noteRepo
-        val tagRepo = (requireContext().applicationContext as App).tagRepo
-        viewModel = ViewModelProvider(this, NotesViewModelFactory(this, savedInstanceState, noteRepo, tagRepo))
-            .get(NotesViewModel::class.java)
+        val viewModelFactory = (requireContext().applicationContext as App).viewModelFactories
+            .notesViewModelFactory(this, savedInstanceState)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(NotesViewModel::class.java)
 
         val fragmentManagerWrapper = FragmentManagerWrapper(parentFragmentManager)
 

@@ -1,5 +1,6 @@
 package ru.freeit.notes.presentation.screens.note
 
+import androidx.lifecycle.AbstractSavedStateViewModelFactory
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import ru.freeit.notes.domain.repository.NoteRepository

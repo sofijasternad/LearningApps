@@ -2,6 +2,7 @@ package ru.freeit.notes.presentation.screens.notes
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -39,6 +40,7 @@ class NotesAdapter(private var callback: NoteListItemCallback) : ListAdapter<Not
                 callback.edit(note)
             }
             val tagsString = note.tagsString()
+            binding.tagsText.isVisible = tagsString.isNotEmpty()
             if (tagsString.isNotEmpty()) {
                 binding.tagsText.text = binding.titleText.context.getString(R.string.tags, note.tagsString())
             }

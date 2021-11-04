@@ -12,4 +12,6 @@ class App : Application() {
     val noteRepo by lazy { NoteRepositoryImpl(database) }
     val tagRepo by lazy { TagRepositoryImpl(database) }
 
+    val viewModelFactories by lazy { ViewModelFactories(noteRepo, tagRepo) }
+
 }
