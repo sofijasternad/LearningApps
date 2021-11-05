@@ -13,18 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7562a55-e435-4290-a72a-46af6c21b439" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/ru/freeit/notes/data/db/AppDatabase_Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/ru/freeit/notes/data/db/AppDatabase_Impl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/ru/freeit/notes/data/db/dao/NoteDao_Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/ru/freeit/notes/data/db/dao/NoteDao_Impl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/data/db/dao/NoteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/data/db/dao/NoteDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/data/db/entity/Tag.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/data/db/entity/Tag.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/data/repository/TagRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/data/repository/TagRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/domain/entity/Tag.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/domain/entity/Tag.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/domain/repository/TagRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/domain/repository/TagRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/note/NoteScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/note/NoteScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/note/NoteViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/note/NoteViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/notes/NotesScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/notes/NotesScreen.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
