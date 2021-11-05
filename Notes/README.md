@@ -25,7 +25,7 @@
   </tr>  
   <tr>
     <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/Notes/screens/screen4.png" /></td>
-    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/Notes/screens/screen5.png" /></td>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/Notes/screens/screen50.png" /></td>
     <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/Notes/screens/screen6.png" /></td>
   </tr>
   <tr>
