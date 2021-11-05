@@ -25,10 +25,14 @@ import java.util.Map;
 import java.util.Set;
 import ru.freeit.notes.data.db.dao.NoteDao;
 import ru.freeit.notes.data.db.dao.NoteDao_Impl;
+import ru.freeit.notes.data.db.dao.TagDao;
+import ru.freeit.notes.data.db.dao.TagDao_Impl;
 
 @SuppressWarnings({"unchecked", "deprecation"})
 public final class AppDatabase_Impl extends AppDatabase {
   private volatile NoteDao _noteDao;
+
+  private volatile TagDao _tagDao;
 
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
@@ -36,13 +40,15 @@ public final class AppDatabase_Impl extends AppDatabase {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `notes` (`title` TEXT NOT NULL, `created_date` INTEGER NOT NULL, `edited_date` INTEGER NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `tags` (`title` TEXT NOT NULL, `note_id` INTEGER NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '46512bdd298cfe7967bd6ea01b8de9d9')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7cac37e217ae471915c0fa3cf6a045e4')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("DROP TABLE IF EXISTS `notes`");
+        _db.execSQL("DROP TABLE IF EXISTS `tags`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -95,9 +101,22 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoNotes + "\n"
                   + " Found:\n" + _existingNotes);
         }
+        final HashMap<String, TableInfo.Column> _columnsTags = new HashMap<String, TableInfo.Column>(3);
+        _columnsTags.put("title", new TableInfo.Column("title", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsTags.put("note_id", new TableInfo.Column("note_id", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsTags.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysTags = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesTags = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoTags = new TableInfo("tags", _columnsTags, _foreignKeysTags, _indicesTags);
+        final TableInfo _existingTags = TableInfo.read(_db, "tags");
+        if (! _infoTags.equals(_existingTags)) {
+          return new RoomOpenHelper.ValidationResult(false, "tags(ru.freeit.notes.data.db.entity.Tag).\n"
+                  + " Expected:\n" + _infoTags + "\n"
+                  + " Found:\n" + _existingTags);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "46512bdd298cfe7967bd6ea01b8de9d9", "88c77722bc72bd68a0edfb7ff690d593");
+    }, "7cac37e217ae471915c0fa3cf6a045e4", "0659f72fdfa9576ceffed1bd5be54e80");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -110,7 +129,7 @@ public final class AppDatabase_Impl extends AppDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "notes");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "notes","tags");
   }
 
   @Override
@@ -120,6 +139,7 @@ public final class AppDatabase_Impl extends AppDatabase {
     try {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `notes`");
+      _db.execSQL("DELETE FROM `tags`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
@@ -134,6 +154,7 @@ public final class AppDatabase_Impl extends AppDatabase {
   protected Map<Class<?>, List<Class<?>>> getRequiredTypeConverters() {
     final HashMap<Class<?>, List<Class<?>>> _typeConvertersMap = new HashMap<Class<?>, List<Class<?>>>();
     _typeConvertersMap.put(NoteDao.class, NoteDao_Impl.getRequiredConverters());
+    _typeConvertersMap.put(TagDao.class, TagDao_Impl.getRequiredConverters());
     return _typeConvertersMap;
   }
 
@@ -147,6 +168,20 @@ public final class AppDatabase_Impl extends AppDatabase {
           _noteDao = new NoteDao_Impl(this);
         }
         return _noteDao;
+      }
+    }
+  }
+
+  @Override
+  public TagDao tagDao() {
+    if (_tagDao != null) {
+      return _tagDao;
+    } else {
+      synchronized(this) {
+        if(_tagDao == null) {
+          _tagDao = new TagDao_Impl(this);
+        }
+        return _tagDao;
       }
     }
   }

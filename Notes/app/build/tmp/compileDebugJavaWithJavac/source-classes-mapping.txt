@@ -1,5 +1,26 @@
+ru/freeit/notes/databinding/NotesScreenBinding.java
+ ru.freeit.notes.databinding.NotesScreenBinding
+ru/freeit/notes/databinding/NoteListItemBinding.java
+ ru.freeit.notes.databinding.NoteListItemBinding
 ru/freeit/notes/BuildConfig.java
  ru.freeit.notes.BuildConfig
+ru/freeit/notes/databinding/TagDialogBinding.java
+ ru.freeit.notes.databinding.TagDialogBinding
+ru/freeit/notes/databinding/ActivityMainBinding.java
+ ru.freeit.notes.databinding.ActivityMainBinding
+ru/freeit/notes/databinding/NoteScreenBinding.java
+ ru.freeit.notes.databinding.NoteScreenBinding
+ru/freeit/notes/data/db/dao/TagDao_Impl.java
+ ru.freeit.notes.data.db.dao.TagDao_Impl
+ ru.freeit.notes.data.db.dao.TagDao_Impl$1
+ ru.freeit.notes.data.db.dao.TagDao_Impl$2
+ ru.freeit.notes.data.db.dao.TagDao_Impl$3
+ ru.freeit.notes.data.db.dao.TagDao_Impl$4
+ ru.freeit.notes.data.db.dao.TagDao_Impl$5
+ ru.freeit.notes.data.db.dao.TagDao_Impl$6
+ru/freeit/notes/data/db/AppDatabase_Impl.java
+ ru.freeit.notes.data.db.AppDatabase_Impl
+ ru.freeit.notes.data.db.AppDatabase_Impl$1
 ru/freeit/notes/data/db/dao/NoteDao_Impl.java
  ru.freeit.notes.data.db.dao.NoteDao_Impl
  ru.freeit.notes.data.db.dao.NoteDao_Impl$1
@@ -13,14 +34,3 @@ ru/freeit/notes/data/db/dao/NoteDao_Impl.java
  ru.freeit.notes.data.db.dao.NoteDao_Impl$7
  ru.freeit.notes.data.db.dao.NoteDao_Impl$8
  ru.freeit.notes.data.db.dao.NoteDao_Impl$9
-ru/freeit/notes/data/db/AppDatabase_Impl.java
- ru.freeit.notes.data.db.AppDatabase_Impl
- ru.freeit.notes.data.db.AppDatabase_Impl$1
-ru/freeit/notes/databinding/NoteListItemBinding.java
- ru.freeit.notes.databinding.NoteListItemBinding
-ru/freeit/notes/databinding/ActivityMainBinding.java
- ru.freeit.notes.databinding.ActivityMainBinding
-ru/freeit/notes/databinding/NoteScreenBinding.java
- ru.freeit.notes.databinding.NoteScreenBinding
-ru/freeit/notes/databinding/NotesScreenBinding.java
- ru.freeit.notes.databinding.NotesScreenBinding

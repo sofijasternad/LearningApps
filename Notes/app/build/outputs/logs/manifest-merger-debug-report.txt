@@ -5,7 +5,6 @@ INJECTED from /home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/
 INJECTED from /home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/AndroidManifest.xml:2:1-24:12
 INJECTED from /home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/AndroidManifest.xml:2:1-24:12
 MERGED from [androidx.databinding:viewbinding:7.0.0] /home/archi/.gradle/caches/transforms-3/adaf1e17893e36073e47f0a7979d375b/transformed/jetified-viewbinding-7.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [io.github.kiberneticworm:awesome-buttons:1.0.6] /home/archi/.gradle/caches/transforms-3/7179555b2e20124a4d36d9da981c5795/transformed/jetified-awesome-buttons-1.0.6/AndroidManifest.xml:2:1-24:12
 MERGED from [androidx.core:core-ktx:1.7.0] /home/archi/.gradle/caches/transforms-3/f1d40bbb831b4a9d26134c795f5c4000/transformed/jetified-core-ktx-1.7.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.material:material:1.4.0] /home/archi/.gradle/caches/transforms-3/b3a1b10170dc3b0d106f5a2151e726da/transformed/material-1.4.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] /home/archi/.gradle/caches/transforms-3/4d193ab5db8b5c331c0126f2c5292965/transformed/constraintlayout-2.1.1/AndroidManifest.xml:2:1-11:12
@@ -65,8 +64,6 @@ INJECTED from /home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/
 		ADDED from /home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/AndroidManifest.xml:2:11-69
 application
 ADDED from /home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/AndroidManifest.xml:5:5-22:19
-MERGED from [io.github.kiberneticworm:awesome-buttons:1.0.6] /home/archi/.gradle/caches/transforms-3/7179555b2e20124a4d36d9da981c5795/transformed/jetified-awesome-buttons-1.0.6/AndroidManifest.xml:9:5-22:19
-MERGED from [io.github.kiberneticworm:awesome-buttons:1.0.6] /home/archi/.gradle/caches/transforms-3/7179555b2e20124a4d36d9da981c5795/transformed/jetified-awesome-buttons-1.0.6/AndroidManifest.xml:9:5-22:19
 MERGED from [com.google.android.material:material:1.4.0] /home/archi/.gradle/caches/transforms-3/b3a1b10170dc3b0d106f5a2151e726da/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] /home/archi/.gradle/caches/transforms-3/b3a1b10170dc3b0d106f5a2151e726da/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] /home/archi/.gradle/caches/transforms-3/4d193ab5db8b5c331c0126f2c5292965/transformed/constraintlayout-2.1.1/AndroidManifest.xml:9:5-20
@@ -115,8 +112,6 @@ INJECTED from /home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/
 INJECTED from /home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/AndroidManifest.xml
 MERGED from [androidx.databinding:viewbinding:7.0.0] /home/archi/.gradle/caches/transforms-3/adaf1e17893e36073e47f0a7979d375b/transformed/jetified-viewbinding-7.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:viewbinding:7.0.0] /home/archi/.gradle/caches/transforms-3/adaf1e17893e36073e47f0a7979d375b/transformed/jetified-viewbinding-7.0.0/AndroidManifest.xml:20:5-44
-MERGED from [io.github.kiberneticworm:awesome-buttons:1.0.6] /home/archi/.gradle/caches/transforms-3/7179555b2e20124a4d36d9da981c5795/transformed/jetified-awesome-buttons-1.0.6/AndroidManifest.xml:5:5-7:41
-MERGED from [io.github.kiberneticworm:awesome-buttons:1.0.6] /home/archi/.gradle/caches/transforms-3/7179555b2e20124a4d36d9da981c5795/transformed/jetified-awesome-buttons-1.0.6/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.core:core-ktx:1.7.0] /home/archi/.gradle/caches/transforms-3/f1d40bbb831b4a9d26134c795f5c4000/transformed/jetified-core-ktx-1.7.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.core:core-ktx:1.7.0] /home/archi/.gradle/caches/transforms-3/f1d40bbb831b4a9d26134c795f5c4000/transformed/jetified-core-ktx-1.7.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.material:material:1.4.0] /home/archi/.gradle/caches/transforms-3/b3a1b10170dc3b0d106f5a2151e726da/transformed/material-1.4.0/AndroidManifest.xml:20:5-44
@@ -207,12 +202,6 @@ INJECTED from /home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/
 		INJECTED from /home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/AndroidManifest.xml
 		ADDED from /home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/AndroidManifest.xml
 		INJECTED from /home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/AndroidManifest.xml
-activity#ru.freeit.awesomebuttons.MainActivity
-ADDED from [io.github.kiberneticworm:awesome-buttons:1.0.6] /home/archi/.gradle/caches/transforms-3/7179555b2e20124a4d36d9da981c5795/transformed/jetified-awesome-buttons-1.0.6/AndroidManifest.xml:13:9-21:20
-	android:exported
-		ADDED from [io.github.kiberneticworm:awesome-buttons:1.0.6] /home/archi/.gradle/caches/transforms-3/7179555b2e20124a4d36d9da981c5795/transformed/jetified-awesome-buttons-1.0.6/AndroidManifest.xml:15:13-36
-	android:name
-		ADDED from [io.github.kiberneticworm:awesome-buttons:1.0.6] /home/archi/.gradle/caches/transforms-3/7179555b2e20124a4d36d9da981c5795/transformed/jetified-awesome-buttons-1.0.6/AndroidManifest.xml:14:13-65
 service#androidx.room.MultiInstanceInvalidationService
 ADDED from [androidx.room:room-runtime:2.3.0] /home/archi/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
 	android:exported

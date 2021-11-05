@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
@@ -13,7 +14,6 @@ import androidx.viewbinding.ViewBindings;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
-import ru.freeit.awesomebuttons.icon.IconButton;
 import ru.freeit.notes.R;
 
 public final class NoteListItemBinding implements ViewBinding {
@@ -21,24 +21,33 @@ public final class NoteListItemBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final IconButton editButton;
+  public final AppCompatImageButton copyButton;
+
+  @NonNull
+  public final AppCompatImageButton editButton;
 
   @NonNull
   public final AppCompatTextView editedDateText;
 
   @NonNull
-  public final IconButton removeButton;
+  public final AppCompatImageButton removeButton;
+
+  @NonNull
+  public final AppCompatTextView tagsText;
 
   @NonNull
   public final AppCompatTextView titleText;
 
-  private NoteListItemBinding(@NonNull ConstraintLayout rootView, @NonNull IconButton editButton,
-      @NonNull AppCompatTextView editedDateText, @NonNull IconButton removeButton,
-      @NonNull AppCompatTextView titleText) {
+  private NoteListItemBinding(@NonNull ConstraintLayout rootView,
+      @NonNull AppCompatImageButton copyButton, @NonNull AppCompatImageButton editButton,
+      @NonNull AppCompatTextView editedDateText, @NonNull AppCompatImageButton removeButton,
+      @NonNull AppCompatTextView tagsText, @NonNull AppCompatTextView titleText) {
     this.rootView = rootView;
+    this.copyButton = copyButton;
     this.editButton = editButton;
     this.editedDateText = editedDateText;
     this.removeButton = removeButton;
+    this.tagsText = tagsText;
     this.titleText = titleText;
   }
 
@@ -69,8 +78,14 @@ public final class NoteListItemBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.copy_button;
+      AppCompatImageButton copyButton = ViewBindings.findChildViewById(rootView, id);
+      if (copyButton == null) {
+        break missingId;
+      }
+
       id = R.id.edit_button;
-      IconButton editButton = ViewBindings.findChildViewById(rootView, id);
+      AppCompatImageButton editButton = ViewBindings.findChildViewById(rootView, id);
       if (editButton == null) {
         break missingId;
       }
@@ -82,8 +97,14 @@ public final class NoteListItemBinding implements ViewBinding {
       }
 
       id = R.id.remove_button;
-      IconButton removeButton = ViewBindings.findChildViewById(rootView, id);
+      AppCompatImageButton removeButton = ViewBindings.findChildViewById(rootView, id);
       if (removeButton == null) {
+        break missingId;
+      }
+
+      id = R.id.tags_text;
+      AppCompatTextView tagsText = ViewBindings.findChildViewById(rootView, id);
+      if (tagsText == null) {
         break missingId;
       }
 
@@ -93,8 +114,8 @@ public final class NoteListItemBinding implements ViewBinding {
         break missingId;
       }
 
-      return new NoteListItemBinding((ConstraintLayout) rootView, editButton, editedDateText,
-          removeButton, titleText);
+      return new NoteListItemBinding((ConstraintLayout) rootView, copyButton, editButton,
+          editedDateText, removeButton, tagsText, titleText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

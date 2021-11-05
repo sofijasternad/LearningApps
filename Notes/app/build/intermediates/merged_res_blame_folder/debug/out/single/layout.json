@@ -8,6 +8,10 @@
         "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/layout/notes_screen.xml"
     },
     {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/tag_dialog.xml",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/layout/tag_dialog.xml"
+    },
+    {
         "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
         "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/layout/activity_main.xml"
     },

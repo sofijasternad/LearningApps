@@ -5,37 +5,47 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.chip.ChipGroup;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 import ru.freeit.notes.R;
+import ru.freeit.notes.presentation.screens.note.AddChip;
 
 public final class NoteScreenBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final LinearLayoutCompat rootView;
+
+  @NonNull
+  public final AddChip addTagButton;
 
   @NonNull
   public final Button applyButton;
 
   @NonNull
+  public final ChipGroup tags;
+
+  @NonNull
   public final AppCompatEditText titleEdit;
 
-  private NoteScreenBinding(@NonNull FrameLayout rootView, @NonNull Button applyButton,
-      @NonNull AppCompatEditText titleEdit) {
+  private NoteScreenBinding(@NonNull LinearLayoutCompat rootView, @NonNull AddChip addTagButton,
+      @NonNull Button applyButton, @NonNull ChipGroup tags, @NonNull AppCompatEditText titleEdit) {
     this.rootView = rootView;
+    this.addTagButton = addTagButton;
     this.applyButton = applyButton;
+    this.tags = tags;
     this.titleEdit = titleEdit;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public LinearLayoutCompat getRoot() {
     return rootView;
   }
 
@@ -60,9 +70,21 @@ public final class NoteScreenBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.add_tag_button;
+      AddChip addTagButton = ViewBindings.findChildViewById(rootView, id);
+      if (addTagButton == null) {
+        break missingId;
+      }
+
       id = R.id.apply_button;
       Button applyButton = ViewBindings.findChildViewById(rootView, id);
       if (applyButton == null) {
+        break missingId;
+      }
+
+      id = R.id.tags;
+      ChipGroup tags = ViewBindings.findChildViewById(rootView, id);
+      if (tags == null) {
         break missingId;
       }
 
@@ -72,7 +94,8 @@ public final class NoteScreenBinding implements ViewBinding {
         break missingId;
       }
 
-      return new NoteScreenBinding((FrameLayout) rootView, applyButton, titleEdit);
+      return new NoteScreenBinding((LinearLayoutCompat) rootView, addTagButton, applyButton, tags,
+          titleEdit);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

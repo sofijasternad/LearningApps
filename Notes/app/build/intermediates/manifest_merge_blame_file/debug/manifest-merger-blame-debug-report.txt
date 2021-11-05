@@ -47,32 +47,15 @@
 28-->/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/AndroidManifest.xml:19:27-74
 29            </intent-filter>
 30        </activity>
-31        <activity
-31-->[io.github.kiberneticworm:awesome-buttons:1.0.6] /home/archi/.gradle/caches/transforms-3/7179555b2e20124a4d36d9da981c5795/transformed/jetified-awesome-buttons-1.0.6/AndroidManifest.xml:13:9-21:20
-32            android:name="ru.freeit.awesomebuttons.MainActivity"
-32-->[io.github.kiberneticworm:awesome-buttons:1.0.6] /home/archi/.gradle/caches/transforms-3/7179555b2e20124a4d36d9da981c5795/transformed/jetified-awesome-buttons-1.0.6/AndroidManifest.xml:14:13-65
-33            android:exported="true" >
-33-->[io.github.kiberneticworm:awesome-buttons:1.0.6] /home/archi/.gradle/caches/transforms-3/7179555b2e20124a4d36d9da981c5795/transformed/jetified-awesome-buttons-1.0.6/AndroidManifest.xml:15:13-36
-34            <intent-filter>
-34-->/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/AndroidManifest.xml:16:13-20:29
-35                <action android:name="android.intent.action.MAIN" />
-35-->/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/AndroidManifest.xml:17:17-69
-35-->/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/AndroidManifest.xml:17:25-66
-36
-37                <category android:name="android.intent.category.LAUNCHER" />
-37-->/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/AndroidManifest.xml:19:17-77
-37-->/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/AndroidManifest.xml:19:27-74
-38            </intent-filter>
-39        </activity>
-40
-41        <service
-41-->[androidx.room:room-runtime:2.3.0] /home/archi/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
-42            android:name="androidx.room.MultiInstanceInvalidationService"
-42-->[androidx.room:room-runtime:2.3.0] /home/archi/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:26:13-74
-43            android:directBootAware="true"
-43-->[androidx.room:room-runtime:2.3.0] /home/archi/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:27:13-43
-44            android:exported="false" />
-44-->[androidx.room:room-runtime:2.3.0] /home/archi/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
-45    </application>
-46
-47</manifest>
+31
+32        <service
+32-->[androidx.room:room-runtime:2.3.0] /home/archi/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
+33            android:name="androidx.room.MultiInstanceInvalidationService"
+33-->[androidx.room:room-runtime:2.3.0] /home/archi/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:26:13-74
+34            android:directBootAware="true"
+34-->[androidx.room:room-runtime:2.3.0] /home/archi/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:27:13-43
+35            android:exported="false" />
+35-->[androidx.room:room-runtime:2.3.0] /home/archi/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
+36    </application>
+37
+38</manifest>

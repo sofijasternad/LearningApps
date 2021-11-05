@@ -31,16 +31,17 @@ class NoteViewModel(
         }
     }
 
+    fun clearTags() = tagRepo.clear()
     fun observeTags(owner: LifecycleOwner, observer: Observer<List<Tag>>) = tags.observe(owner, observer)
     fun observeStatus(owner: LifecycleOwner, observer: Observer<NoteStatus>) = status.observe(owner, observer)
 
     fun addTag(title: String) {
-        val newTag = Tag(title)
+        val newTag = Tag(title = title)
         tagRepo.add(newTag)
         changeTags { tags -> tags.add(newTag) }
     }
 
-    fun removeTag(tag: Tag) = viewModelScope.launch {
+    fun removeTag(tag: Tag) {
         tagRepo.remove(tag)
         changeTags { tags -> tags.remove(tag) }
     }

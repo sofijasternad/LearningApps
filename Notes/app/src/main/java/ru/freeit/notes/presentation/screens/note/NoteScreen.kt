@@ -16,22 +16,15 @@ import ru.freeit.notes.presentation.MainActivity
 
 class NoteScreen : Fragment() {
 
-    companion object {
-        private const val noteIdKey = "note_id_key"
-        fun newInstance(noteId: Long) = NoteScreen().apply {
-            arguments = bundleOf(noteIdKey to noteId)
-        }
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val binding = NoteScreenBinding.inflate(inflater)
-
-
 
         val noteId = arguments?.getLong(noteIdKey, -1L) ?: -1L
 
         val viewModelFactory = (requireContext().applicationContext as App).viewModelFactories.noteViewModelFactory(noteId)
         val viewModel = ViewModelProvider(this, viewModelFactory).get(NoteViewModel::class.java)
+
+        if (savedInstanceState == null) { viewModel.clearTags() }
 
         binding.addTagButton.setOnClickListener { TagDialog().show(parentFragmentManager) }
 
@@ -41,6 +34,7 @@ class NoteScreen : Fragment() {
             binding.tags.removeAllViews()
             for (tag in tags) {
                 val chip = Chip(requireContext())
+                chip.isCloseIconVisible = true
                 chip.setCloseIconResource(R.drawable.ic_delete_24)
                 chip.setOnCloseIconClickListener { viewModel.removeTag(tag) }
                 chip.text = tag.title()
@@ -74,5 +68,12 @@ class NoteScreen : Fragment() {
         }
 
         return binding.root
+    }
+
+    companion object {
+        private const val noteIdKey = "note_id_key"
+        fun newInstance(noteId: Long) = NoteScreen().apply {
+            arguments = bundleOf(noteIdKey to noteId)
+        }
     }
 }
