@@ -11,5 +11,7 @@ class GoogleSignClient(activity: Activity) {
 
     private val client = GoogleSignIn.getClient(activity, options)
 
+
+    fun signOut() = client.signOut()
     fun signInIntent() = client.signInIntent
 }

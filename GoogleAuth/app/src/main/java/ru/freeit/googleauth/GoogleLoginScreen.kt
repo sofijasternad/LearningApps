@@ -10,6 +10,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.FirebaseAuth
 import ru.freeit.googleauth.databinding.GoogleLoginScreenBinding
 
 class GoogleLoginScreen : Fragment() {
@@ -52,6 +53,7 @@ class GoogleLoginScreen : Fragment() {
         }
 
         binding.logoutButton.setOnClickListener {
+            googleSignClient.signOut()
             binding.loginButton.isEnabled = true
             binding.logoutButton.isEnabled = false
             binding.statusText.text = getString(R.string.you_arent_in_account)
