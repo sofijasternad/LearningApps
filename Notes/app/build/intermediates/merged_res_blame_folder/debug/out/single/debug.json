@@ -4,12 +4,12 @@
         "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/layout_note_list_item.xml.flat",
-        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/layout/note_list_item.xml"
-    },
-    {
         "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/layout_note_list_item.xml.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/layout/note_list_item.xml"
     },
     {
         "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/menu_sorting_menu.xml.flat",
@@ -28,12 +28,12 @@
         "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/anim/fade_in.xml"
     },
     {
-        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-mdpi/ic_launcher.png"
-    },
-    {
         "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
         "merged": "/home/archi/AndroidStudioProjects/LearningApps/Notes/app/build/intermediates/merged_res/debug/drawable_ic_delete_24.xml.flat",

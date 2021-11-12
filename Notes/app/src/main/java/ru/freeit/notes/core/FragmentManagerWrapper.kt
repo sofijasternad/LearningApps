@@ -1,5 +1,6 @@
 package ru.freeit.notes.core
 
+import android.widget.TextView
 import androidx.annotation.AnimRes
 import androidx.annotation.AnimatorRes
 import androidx.fragment.app.Fragment

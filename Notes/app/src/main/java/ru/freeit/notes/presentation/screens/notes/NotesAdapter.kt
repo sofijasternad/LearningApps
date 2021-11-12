@@ -2,6 +2,8 @@ package ru.freeit.notes.presentation.screens.notes
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.core.view.ViewCompat
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -26,6 +28,7 @@ class NotesAdapter(private var callback: NoteListItemCallback) : ListAdapter<Not
     class NotesViewHolder(private val binding: NoteListItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(index: Int, note: Note, callback: NoteListItemCallback) {
+
             binding.titleText.text = "${index + 1}. ${note.title().trim()}"
             binding.removeButton.setOnClickListener {
                 callback.remove(note)

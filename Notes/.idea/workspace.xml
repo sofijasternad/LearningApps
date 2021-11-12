@@ -13,15 +13,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7562a55-e435-4290-a72a-46af6c21b439" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/fade_in.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/fade_out.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/transition/fade_in.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/core/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/core/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/core/App.kapt_metadata" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/core/App.kapt_metadata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/note/NoteScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/note/NoteScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/note/NoteScreen.kapt_metadata" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/note/NoteScreen.kapt_metadata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/notes/NoteListItemCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/notes/NoteListItemCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/notes/NoteListItemCallback.kapt_metadata" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/notes/NoteListItemCallback.kapt_metadata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/notes/NotesAdapter.kapt_metadata" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/notes/NotesAdapter.kapt_metadata" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/notes/NotesScreen.kapt_metadata" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/notes/NotesScreen.kapt_metadata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/core/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/core/App.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/core/FragmentManagerWrapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/core/FragmentManagerWrapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/note/NoteScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/note/NoteScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/notes/NotesAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/notes/NotesAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/notes/NotesScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/notes/NotesScreen.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
