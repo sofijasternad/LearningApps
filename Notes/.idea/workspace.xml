@@ -13,26 +13,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7562a55-e435-4290-a72a-46af6c21b439" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/transition/fade_in.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/note/NoteScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/note/NoteScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/note/NoteScreen.kapt_metadata" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/note/NoteScreen.kapt_metadata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/notes/NoteListItemCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/notes/NoteListItemCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/notes/NoteListItemCallback.kapt_metadata" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/notes/NoteListItemCallback.kapt_metadata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/notes/NotesAdapter.kapt_metadata" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/notes/NotesAdapter.kapt_metadata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/notes/NotesScreen.kapt_metadata" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/ru/freeit/notes/presentation/screens/notes/NotesScreen.kapt_metadata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/core/FragmentManagerWrapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/core/FragmentManagerWrapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/note/NoteScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/note/NoteScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/notes/NotesAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/notes/NotesAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/notes/NotesScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/notes/NotesScreen.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/home/archi/.android/avd/Pixel_4_API_21.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[JYXNW20805003141]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
