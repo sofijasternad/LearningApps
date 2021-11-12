@@ -51,7 +51,15 @@ class NotesScreen : Fragment() {
         viewModel.init()
         viewModel.observeNotes(viewLifecycleOwner, adapter::submitList)
 
-        binding.addNoteButton.setOnClickListener { fragmentManagerWrapper.replace(NoteScreen()) }
+        binding.addNoteButton.setOnClickListener {
+            fragmentManagerWrapper.replaceWithAnim(
+                NoteScreen(),
+                R.anim.fade_in,
+                R.anim.fade_out,
+                R.anim.fade_in,
+                R.anim.fade_out
+            )
+        }
 
         setHasOptionsMenu(true)
 
