@@ -9,7 +9,7 @@ import ru.freeit.hiltapp.domain.repository.ChapterRepository
 import ru.freeit.hiltapp.domain.repository.ChapterRepositoryImpl
 
 @Module
-@InstallIn(ActivityComponent::class)
+@InstallIn(ViewModelComponent::class)
 abstract class ChapterRepositoryModule {
 
     @Binds

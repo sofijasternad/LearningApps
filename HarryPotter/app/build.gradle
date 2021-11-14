@@ -1,10 +1,12 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
     id 'kotlinx-serialization'
+    id 'kotlin-kapt'
+//    id 'dagger.hilt.android.plugin'
 }
+
+apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     compileSdk 31
@@ -31,6 +33,12 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+}
+
+kapt {
+    javacOptions {
+        option("-Adagger.hilt.android.internal.disableAndroidSuperclassValidation=true")
     }
 }
 

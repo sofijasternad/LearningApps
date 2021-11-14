@@ -14,7 +14,7 @@ interface ChapterLocalDataSource {
     suspend fun fetchChapter() : Chapter
 }
 
-class ChapterLocalDataSourceImpl @Inject constructor(@ActivityContext private val ctx: Context) : ChapterLocalDataSource {
+class ChapterLocalDataSourceImpl @Inject constructor(@ApplicationContext private val ctx: Context) : ChapterLocalDataSource {
 
     override suspend fun fetchChapter(): Chapter {
         val jsonString = ctx.assets.open("potter5.json").bufferedReader().use { reader ->

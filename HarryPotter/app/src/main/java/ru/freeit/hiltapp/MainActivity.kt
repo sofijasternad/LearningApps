@@ -5,10 +5,13 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.viewModels
 import dagger.hilt.android.AndroidEntryPoint
+import ru.freeit.hiltapp.domain.repository.ChapterRepository
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
+//    @Inject lateinit var repo: ChapterRepository
     private val viewModel by viewModels<MainViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
