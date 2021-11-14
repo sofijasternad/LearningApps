@@ -4,15 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:scrollbarThumbVertical="@drawable/scroll"
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/text"
-        android:textSize="30sp"
-        android:lineHeight="40sp"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/chapter_name"
+            android:textSize="36sp"
+            android:textColor="@color/brown_500"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/chapter_content"
+            android:textSize="30sp"
+            android:paddingEnd="8dp"
+            android:lineHeight="40sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </ScrollView>
