@@ -2,6 +2,7 @@ package ru.freeit.hiltapp.data.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import ru.freeit.hiltapp.ChapterUi
 
 @Serializable
 data class Chapter(
@@ -11,4 +12,5 @@ data class Chapter(
     val text: String
 ) {
     fun content() = text
+    fun toUi() = ChapterUi(name, text)
 }

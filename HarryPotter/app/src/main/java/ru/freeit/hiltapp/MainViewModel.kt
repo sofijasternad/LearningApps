@@ -11,15 +11,15 @@ class MainViewModel @Inject constructor(
     private val repo: ChapterRepository
 ) : ViewModel() {
 
-    private val chapterText = MutableLiveData<String>()
+    private val chapterText = MutableLiveData<ChapterUi>()
 
-    fun observe(owner: LifecycleOwner, observer: Observer<String>) =
+    fun observe(owner: LifecycleOwner, observer: Observer<ChapterUi>) =
         chapterText.observe(owner, observer)
 
     fun init() {
         viewModelScope.launch {
             val chapter = repo.chapter()
-            chapterText.value = chapter.content()
+            chapterText.value = chapter.toUi()
         }
     }
 }

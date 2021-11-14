@@ -15,10 +15,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val text = findViewById<TextView>(R.id.chapter_content)
+        val chapterName = findViewById<TextView>(R.id.chapter_name)
+        val chapterContent = findViewById<TextView>(R.id.chapter_content)
 
-        viewModel.observe(this) { content ->
-            text.text = content
+        viewModel.observe(this) { chapterUi ->
+            chapterUi.name(chapterName)
+            chapterUi.content(chapterContent)
         }
 
         viewModel.init()
