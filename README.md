@@ -1,6 +1,6 @@
-# LearningApps
+![Android приложения](https://github.com/KiberneticWorm/LearningApps/blob/master/screens/learning_apps_logo.png)
 
-<img alt="Google Inc." src="https://www.ixbt.com/img/n1/news/2021/4/4/Android-Lollipop-at-Google-HQ_large.jpg" />
+# LearningApps
 
 Проект LearningApps содержит в себе различные приложения, в каждом из которых проработано несколько тем по Android разработке.
 
