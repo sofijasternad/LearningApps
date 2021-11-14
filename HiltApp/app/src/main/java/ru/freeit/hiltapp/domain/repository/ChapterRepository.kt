@@ -5,13 +5,18 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import ru.freeit.hiltapp.data.local.ChapterLocalDataSource
 import ru.freeit.hiltapp.data.model.Chapter
+import javax.inject.Inject
 
-class ChapterRepository(
+interface ChapterRepository {
+    suspend fun chapter() : Chapter
+}
+
+class ChapterRepositoryImpl @Inject constructor(
     private val local: ChapterLocalDataSource,
-    private val dispatcher: CoroutineDispatcher = Dispatchers.IO
-) {
+    private val dispatcher: CoroutineDispatcher
+) : ChapterRepository {
 
-    suspend fun chapter() = withContext(dispatcher) {
+    override suspend fun chapter() = withContext(dispatcher) {
         local.fetchChapter()
     }
 

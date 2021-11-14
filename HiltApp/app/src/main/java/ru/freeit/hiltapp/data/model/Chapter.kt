@@ -10,4 +10,5 @@ data class Chapter(
     @SerialName(value = "chapter_text")
     val text: String
 ) {
+    fun content() = text
 }
