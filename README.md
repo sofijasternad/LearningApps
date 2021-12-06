@@ -17,6 +17,7 @@
 7. [MyPosts](https://github.com/KiberneticWorm/LearningApps/tree/master/MyPosts) - архитектура MVVM, создание <code>ViewModel</code> для фрагмента, передача параметров в конструктор <code>ViewModel</code> с помощью специального класса <code>ViewModelFactory</code>, транзакции с фрагментами, создание запроса к серверу через <code>HttpsURLConnection</code> объект, добавление статусов: загрузка, ошибка и данные, добавление <code>RecyclerView</code> и реализация простого адаптера
 8. [Notes](https://github.com/KiberneticWorm/LearningApps/tree/master/Notes) - архитектура MVVM, добавление библиотеки Room для работы с базой данных SQLite, реализация навигации между двумя фрагментами через <code>FragmenManager</code>, создание диалогового окна, использование материального компонента <code>Chip</code> для отображения тэгов
 9. [HarryPotter](https://github.com/KiberneticWorm/LearningApps/tree/master/HarryPotter) - внедрение зависимостей с помощью <code>Hilt</code>, <code>Kotlin</code> десериализация <code>json</code> файла, вывод прокручиваемого текста, изменение внешнего вида ползунка прокрутки
+10. [FadingList](https://github.com/KiberneticWorm/LearningApps/tree/master/FadingList) - UI реализован чистым Kotlin кодом без использования xml разметки
 
 ## Как начать?
 
@@ -99,5 +100,13 @@
     <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/MyPosts/screens/screen10.png" /></td>
     <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/MyPosts/screens/screen20.png" /></td>
   </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/FadingList/screens/screen1.png"/></td>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/FadingList/screens/screen2.png"/></td>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/FadingList/screens/screen3.png"/></td>
+  </tr>  
 </table>
 
