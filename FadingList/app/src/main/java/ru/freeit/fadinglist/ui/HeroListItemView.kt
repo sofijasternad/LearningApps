@@ -16,7 +16,7 @@ class HeroListItemView(ctx: Context, listenItem: (item: (pos: Int, item: Hero) -
         }
 
         val fadingView = textView(ctx) {
-            bgColor(rgba(0, 0, 0, .6f))
+            bgColor(rgba(0, 0, 0, .8f))
             alpha(0f)
             layoutParams(frameLayoutParams().matchWidth().matchHeight().params())
         }
