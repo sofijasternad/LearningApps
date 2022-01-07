@@ -1,7 +1,9 @@
 package ru.freeit.fadinglist.ui
 
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import ru.freeit.fadinglist.core.*
 

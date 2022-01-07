@@ -26,13 +26,29 @@ class FrameLayoutLP(private val params: FrameLayout.LayoutParams = FrameLayout.L
         width = FrameLayout.LayoutParams.MATCH_PARENT
     })
 
-    fun width(dp: Int) = FrameLayoutLP(params.apply {
+    fun wrapWidth() = FrameLayoutLP(params.apply {
         width = FrameLayout.LayoutParams.WRAP_CONTENT
+    })
+
+    fun matchHeight() = FrameLayoutLP(params.apply {
+        height = FrameLayout.LayoutParams.MATCH_PARENT
+    })
+
+    fun wrapHeight() = FrameLayoutLP(params.apply {
+        height = FrameLayout.LayoutParams.WRAP_CONTENT
     })
 
     fun center() = FrameLayoutLP(params.apply {
         gravity = Gravity.CENTER
     })
+
+    fun params() = params
+
+    fun width(dp: Int) = FrameLayoutLP(params.apply {
+        width = FrameLayout.LayoutParams.WRAP_CONTENT
+    })
+
+
 
     fun bottomStart() = FrameLayoutLP(params.apply {
         gravity = Gravity.BOTTOM or Gravity.START
@@ -47,27 +63,19 @@ class FrameLayoutLP(private val params: FrameLayout.LayoutParams = FrameLayout.L
     })
 
 
-    fun wrapWidth() = FrameLayoutLP(params.apply {
-        width = FrameLayout.LayoutParams.WRAP_CONTENT
-    })
+
 
     fun height(dp: Int) = FrameLayoutLP(params.apply {
         height = dp
     })
 
-    fun matchHeight() = FrameLayoutLP(params.apply {
-        height = FrameLayout.LayoutParams.MATCH_PARENT
-    })
 
-    fun wrapHeight() = FrameLayoutLP(params.apply {
-        height = FrameLayout.LayoutParams.WRAP_CONTENT
-    })
 
     fun gravity(grav: Int) = FrameLayoutLP(params.apply {
         gravity = grav
     })
 
-    fun params() = params
+
 
     fun margins(startDp: Int, topDp: Int, endDp: Int, bottomDp: Int) = FrameLayoutLP(params.apply {
         marginStart = startDp

@@ -141,11 +141,11 @@ fun AppCompatTextView.textCenter() {
     textAlignment = View.TEXT_ALIGNMENT_CENTER
 }
 
-fun TextView.color(color: Int) {
+fun AppCompatTextView.color(color: Int) {
     setTextColor(color)
 }
 
-fun <T> TextView.text(value: T) {
+fun <T> AppCompatTextView.text(value: T) {
     text = value.toString()
 }
 
