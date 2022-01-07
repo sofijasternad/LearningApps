@@ -17,8 +17,11 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/battery_level_text"
         android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/white"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
+        android:textSize="50sp"
         android:layout_margin="32dp"/>
 
 </FrameLayout>

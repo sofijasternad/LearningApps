@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">BatteryLevel</string>
+    <string name="app_name">Battapp</string>
+    <string name="charging">Заряжается</string>
+    <string name="not_charging">Не заряжается</string>
 </resources>
