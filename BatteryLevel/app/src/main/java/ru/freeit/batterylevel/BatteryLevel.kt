@@ -39,5 +39,4 @@ class BatteryLevel(private val level: Int, private val isCharging: Boolean = fal
         }
     }
 
-
 }
