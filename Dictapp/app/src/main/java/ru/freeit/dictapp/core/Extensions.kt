@@ -37,10 +37,6 @@ fun JSONArray.jsonObject(index: Int) : JSONObject {
     return getJSONObject(index)
 }
 
-fun JSONObject.jsonObject(key: String, default: JSONObject = JSONObject()) : JSONObject {
-    return if (has(key)) getJSONObject(key) else default
-}
-
 fun JSONObject.array(key: String, default: JSONArray = JSONArray()) : JSONArray {
     return if (has(key)) getJSONArray(key) else default
 }

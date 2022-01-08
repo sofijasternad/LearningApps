@@ -24,6 +24,7 @@ sealed class DictResultUi {
         }
 
         fun definitions(layout: LinearLayoutCompat) {
+            layout.removeAllViews()
             definitions.mapIndexed { index, definition -> definition.str(index + 1) }
                 .forEach { str ->
                     layout.addView(AppCompatTextView(layout.context).apply {
