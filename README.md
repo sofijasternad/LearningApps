@@ -18,6 +18,7 @@
 8. [Notes](https://github.com/KiberneticWorm/LearningApps/tree/master/Notes) - архитектура MVVM, добавление библиотеки Room для работы с базой данных SQLite, реализация навигации между двумя фрагментами через <code>FragmenManager</code>, создание диалогового окна, использование материального компонента <code>Chip</code> для отображения тэгов
 9. [HarryPotter](https://github.com/KiberneticWorm/LearningApps/tree/master/HarryPotter) - внедрение зависимостей с помощью <code>Hilt</code>, <code>Kotlin</code> десериализация <code>json</code> файла, вывод прокручиваемого текста, изменение внешнего вида ползунка прокрутки
 10. [FadingList](https://github.com/KiberneticWorm/LearningApps/tree/master/FadingList) - UI реализован чистым Kotlin кодом без использования xml разметки
+11. [Battapp](https://github.com/KiberneticWorm/LearningApps/tree/master/BatteryLevel) - получение и обновление уровня заряда батереи телефона с помощью <code>BroadcastReceiver</code>
 
 ## Как начать?
 
