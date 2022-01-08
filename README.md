@@ -19,6 +19,7 @@
 9. [HarryPotter](https://github.com/KiberneticWorm/LearningApps/tree/master/HarryPotter) - внедрение зависимостей с помощью <code>Hilt</code>, <code>Kotlin</code> десериализация <code>json</code> файла, вывод прокручиваемого текста, изменение внешнего вида ползунка прокрутки
 10. [FadingList](https://github.com/KiberneticWorm/LearningApps/tree/master/FadingList) - UI реализован чистым Kotlin кодом без использования xml разметки
 11. [Battapp](https://github.com/KiberneticWorm/LearningApps/tree/master/BatteryLevel) - получение и обновление уровня заряда батереи телефона с помощью <code>BroadcastReceiver</code>
+12. [Dictapp](https://github.com/KiberneticWorm/LearningApps/tree/master/Dictapp) - реализация простого словарика с помощью нативных средств Java и Android без использования современных библиотек, таких как Retrofit, GSON и Kotlin Coroutines
 
 ## Как начать?
 
@@ -116,5 +117,16 @@
     <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/FadingList/screens/screen2.png"/></td>
     <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/FadingList/screens/screen3.png"/></td>
   </tr>  
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/Dictapp/screens/screen1.png" /></td>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/Dictapp/screens/screen2.png" /></td>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/Dictapp/screens/screen3.png" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/KiberneticWorm/LearningApps/blob/master/Dictapp/screens/screen4.png" /></td>
+  </tr>
 </table>
 
