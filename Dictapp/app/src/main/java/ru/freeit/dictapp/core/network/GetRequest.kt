@@ -1,29 +1,35 @@
-package ru.freeit.dictapp
+package ru.freeit.dictapp.core.network
 
 import android.os.Handler
 import android.os.Looper
-import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
-import java.net.HttpURLConnection
 import java.net.URL
 import java.net.UnknownHostException
 import java.util.concurrent.Executors
+import javax.net.ssl.HttpsURLConnection
 
-class GetRequest(private val url: String, private val params: Map<String, String> = mapOf()) {
+open class GetRequest(private val url: String, private val params: Map<String, String> = mapOf()) {
 
     private val executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors())
     private val handler = Handler(Looper.getMainLooper())
 
     fun withParam(key: String, value: String) = GetRequest(url, params.toMutableMap().apply { put(key, value) })
 
-    fun execute(onSuccess: (json: String) -> Unit, onError: () -> Unit) {
+    fun execute(onSuccess: (json: String) -> Unit, onError: (error: GetError) -> Unit) {
         executor.execute {
             try {
-                val paramStr = params.map { entry -> "${entry.key}=${entry.value}" }.joinToString("&")
-                val connection = URL("$url?$paramStr").openConnection() as HttpURLConnection
+
+                val str = if (params.isEmpty()) {
+                    url
+                } else {
+                    val paramStr = params.map { entry -> "${entry.key}=${entry.value}" }.joinToString("&")
+                    "$url?$paramStr"
+                }
+
+                val connection = URL(str).openConnection() as HttpsURLConnection
                 connection.requestMethod = "GET"
-                connection.setRequestProperty("Content-Type", "application/json")
+                connection.setRequestProperty("Content-Type", "application/json; utf-8")
                 connection.connectTimeout = 5000
                 connection.readTimeout = 5000
 
@@ -39,8 +45,15 @@ class GetRequest(private val url: String, private val params: Map<String, String
 
                 handler.post { onSuccess(content.toString()) }
 
-            } catch (missingInternet: UnknownHostException) {
-                handler.post { onError() }
+            } catch (error: Exception) {
+                error.printStackTrace()
+                handler.post {
+                    if (error is UnknownHostException) {
+                        onError(GetError.MISSING_INTERNET)
+                    } else {
+                        onError(GetError.OTHER)
+                    }
+                }
             }
         }
     }

@@ -14,18 +14,18 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@color/white"
-        tools:context=".MainActivity">
+        tools:context=".ui.MainActivity">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/search_box"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:endIconMode="custom"
-            app:boxBackgroundMode="none"
             app:hintEnabled="false"
             app:boxCollapsedPaddingTop="0dp"
             app:endIconDrawable="@drawable/ic_search_24"
-            android:layout_margin="32dp" >
+            android:layout_margin="32dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/search_edit"
@@ -40,6 +40,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <FrameLayout
+            android:id="@+id/frame_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1" >

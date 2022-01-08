@@ -1,4 +1,4 @@
-package ru.freeit.dictapp
+package ru.freeit.dictapp.core
 
 import android.os.Handler
 

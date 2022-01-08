@@ -1,6 +1,8 @@
-package ru.freeit.dictapp
+package ru.freeit.dictapp.data
 
 import androidx.annotation.StringRes
+import ru.freeit.dictapp.ui.DictResultUi
+import ru.freeit.dictapp.R
 import ru.freeit.dictapp.core.*
 
 sealed class DictResultData {
