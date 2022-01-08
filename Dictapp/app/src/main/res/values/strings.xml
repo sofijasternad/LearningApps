@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Dictapp</string>
+    <string name="word_search">Поиск слова</string>
+    <string name="search">Искать...</string>
+</resources>
