@@ -5,12 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/vertical_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:background="@color/white"
         tools:context=".MainActivity">
 
@@ -37,6 +39,31 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:indeterminate="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/error_text"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/word_text"
             android:layout_marginStart="32dp"
@@ -48,14 +75,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/meaning_text"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/definitions_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:textColor="@color/grey_300"
             android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp" />
+            android:layout_marginEnd="32dp"
+            android:orientation="vertical"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
