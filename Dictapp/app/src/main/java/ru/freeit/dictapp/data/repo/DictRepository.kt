@@ -1,6 +1,6 @@
-package ru.freeit.dictapp.data
+package ru.freeit.dictapp.data.repo
 
-import ru.freeit.dictapp.data.DictResultData
+import ru.freeit.dictapp.data.entity.DictResultData
 
 interface DictRepository {
     fun infoAboutWordBy(word: String, onSuccess: (dictResultData: DictResultData) -> Unit)

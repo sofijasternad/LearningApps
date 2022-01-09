@@ -1,39 +1,21 @@
 package ru.freeit.dictapp.core.network
 
 import android.os.Handler
-import android.os.Looper
-import java.io.BufferedReader
-import java.io.InputStreamReader
-import java.net.URL
 import java.net.UnknownHostException
-import java.util.concurrent.Executors
-import javax.net.ssl.HttpsURLConnection
+import java.util.concurrent.ExecutorService
 
-open class GetRequest(private val url: String) {
-
-    private val executor = Executors.newSingleThreadExecutor()
-    private val handler = Handler(Looper.getMainLooper())
+open class GetRequest(
+    private val url: String,
+    private val executor: ExecutorService,
+    private val handler: Handler
+) {
 
     fun execute(onSuccess: (json: String) -> Unit, onError: (error: GetError) -> Unit) {
         executor.execute {
             try {
-                val connection = URL(url).openConnection() as HttpsURLConnection
-                connection.requestMethod = "GET"
-                connection.setRequestProperty("Content-Type", "application/json; utf-8")
-                connection.connectTimeout = 5000
-                connection.readTimeout = 5000
+                val json = HttpsConnection(url).get()
 
-                val reader = BufferedReader(InputStreamReader(connection.inputStream))
-                val content = StringBuffer()
-                var inputLine = reader.readLine()
-                while (inputLine != null) {
-                    content.append(inputLine)
-                    inputLine = reader.readLine()
-                }
-
-                connection.disconnect()
-
-                handler.post { onSuccess(content.toString()) }
+                handler.post { onSuccess(json) }
 
             } catch (error: Exception) {
                 handler.post {

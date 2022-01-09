@@ -1,4 +1,4 @@
-package ru.freeit.dictapp.ui
+package ru.freeit.dictapp.presentation
 
 import android.os.Bundle
 import android.os.Handler
@@ -8,8 +8,10 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.*
 import ru.freeit.dictapp.core.Debounce
 import ru.freeit.dictapp.core.onTextChange
-import ru.freeit.dictapp.data.DictRepositoryImpl
+import ru.freeit.dictapp.data.repo.DictRepositoryImpl
 import ru.freeit.dictapp.databinding.ActivityMainBinding
+import ru.freeit.dictapp.presentation.ui.DictResultUi
+import java.util.concurrent.Executors
 
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +21,9 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val viewModel = ViewModelProvider(this, DictViewModelFactory(DictRepositoryImpl()))
+        val executor = Executors.newSingleThreadExecutor()
+        val handler = Handler(Looper.getMainLooper())
+        val viewModel = ViewModelProvider(this, DictViewModelFactory(DictRepositoryImpl(executor, handler)))
             .get(DictViewModel::class.java)
 
         viewModel.observe(this) { dictResult ->

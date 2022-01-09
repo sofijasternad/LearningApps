@@ -1,4 +1,4 @@
-package ru.freeit.dictapp.data
+package ru.freeit.dictapp.data.entity
 
 import android.graphics.Color
 import android.text.Spannable

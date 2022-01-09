@@ -1,10 +1,11 @@
-package ru.freeit.dictapp.ui
+package ru.freeit.dictapp.presentation
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
-import ru.freeit.dictapp.data.DictRepository
+import ru.freeit.dictapp.data.repo.DictRepository
+import ru.freeit.dictapp.presentation.ui.DictResultUi
 
 class DictViewModel(private val repo: DictRepository) : ViewModel() {
 
