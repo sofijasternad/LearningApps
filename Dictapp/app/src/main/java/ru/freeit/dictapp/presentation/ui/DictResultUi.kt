@@ -6,17 +6,17 @@ import androidx.appcompat.widget.LinearLayoutCompat
 import ru.freeit.dictapp.data.entity.DictDefinition
 import ru.freeit.dictapp.presentation.view.DefinitionTextView
 
-sealed class DictResultUi {
+sealed interface DictResultUi {
 
-    object Loading: DictResultUi()
+    object Loading: DictResultUi
 
-    data class Error(@StringRes private val textResId: Int): DictResultUi() {
+    data class Error(@StringRes private val textResId: Int): DictResultUi {
         fun text(view: TextView) {
             view.setText(textResId)
         }
     }
 
-    data class Success(private val word: String, private val definitions: List<DictDefinition>) : DictResultUi() {
+    data class Success(private val word: String, private val definitions: List<DictDefinition>) : DictResultUi {
 
         fun word(view: TextView) {
             view.text = word

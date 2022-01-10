@@ -5,17 +5,17 @@ import ru.freeit.dictapp.presentation.ui.DictResultUi
 import ru.freeit.dictapp.R
 import ru.freeit.dictapp.core.*
 
-sealed class DictResultData {
+sealed interface DictResultData {
 
-    abstract fun toUi() : DictResultUi
+    fun toUi() : DictResultUi
 
-    data class Success(private val word: String, private val definitions: List<DictDefinition>) : DictResultData() {
+    data class Success(private val word: String, private val definitions: List<DictDefinition>) : DictResultData {
         override fun toUi(): DictResultUi {
             return DictResultUi.Success(word, definitions)
         }
     }
 
-    data class Error(@StringRes private val resId: Int) : DictResultData() {
+    data class Error(@StringRes private val resId: Int) : DictResultData {
         override fun toUi(): DictResultUi {
             return DictResultUi.Error(resId)
         }

@@ -13,7 +13,7 @@ class DictViewModel(private val repo: DictRepository) : ViewModel() {
 
     fun observe(lifecycleOwner: LifecycleOwner, observer: Observer<DictResultUi>) = wordUi.observe(lifecycleOwner, observer)
 
-    fun found(word: String) {
+    fun searchWordDefinition(word: String) {
         if (word.isEmpty()) {
             return
         }

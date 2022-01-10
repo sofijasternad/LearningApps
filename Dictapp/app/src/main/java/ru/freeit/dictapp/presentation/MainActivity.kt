@@ -38,19 +38,21 @@ class MainActivity : AppCompatActivity() {
             binding.definitionsLayout.isVisible = isSuccess
             binding.wordText.isVisible = isSuccess
 
-            if (dictResult is DictResultUi.Error) {
-                dictResult.text(binding.errorText)
-            }
-
-            if (dictResult is DictResultUi.Success) {
-                dictResult.word(binding.wordText)
-                dictResult.definitions(binding.definitionsLayout)
+            when (dictResult) {
+                is DictResultUi.Error -> {
+                    dictResult.text(binding.errorText)
+                }
+                is DictResultUi.Success -> {
+                    dictResult.word(binding.wordText)
+                    dictResult.definitions(binding.definitionsLayout)
+                }
+                else -> {}
             }
 
         }
 
         val debounce = Debounce(Handler(Looper.getMainLooper()))
-        val runnable = Runnable { viewModel.found(binding.searchEdit.text.toString()) }
+        val runnable = Runnable { viewModel.searchWordDefinition(binding.searchEdit.text.toString()) }
         binding.searchEdit.onTextChange { debounce.run(runnable) }
         binding.searchBox.setEndIconOnClickListener { runnable.run() }
     }
