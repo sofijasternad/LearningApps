@@ -25,17 +25,9 @@
 
 ## Как начать?
 
-Загрузите мой репозиторий:
+Следуйте следующей видео-инструкции:
 
-    git clone https://github.com/KiberneticWorm/LearningApps.git
-  
-Откройте любой из проектов в Android Studio:
-
-![открытие проекта в Android Studio](https://github.com/KiberneticWorm/LearningApps/blob/master/screens/learning_apps.png)
-
-Подождите, пока установятся все зависимости.
-
-Запускайте и чекайте код :)
+[![demo](https://img.youtube.com/vi/B94pYHeTZ3k/0.jpg)](https://www.youtube.com/watch?v=B94pYHeTZ3k)
 
 ## Ваши пожелания и идеи
 
