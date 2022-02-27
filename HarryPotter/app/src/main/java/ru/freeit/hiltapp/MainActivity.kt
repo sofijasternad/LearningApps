@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.viewModels
 import dagger.hilt.android.AndroidEntryPoint
+import ru.freeit.hiltapp.databinding.ActivityMainBinding
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -13,17 +14,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        val chapterName = findViewById<TextView>(R.id.chapter_name)
-        val chapterContent = findViewById<TextView>(R.id.chapter_content)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         viewModel.observe(this) { chapterUi ->
-            chapterUi.name(chapterName)
-            chapterUi.content(chapterContent)
+            chapterUi.name(binding.chapterName)
+            chapterUi.content(binding.chapterContent)
         }
-
-        viewModel.init()
 
     }
 
