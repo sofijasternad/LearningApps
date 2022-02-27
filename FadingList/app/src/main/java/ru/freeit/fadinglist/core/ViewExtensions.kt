@@ -1,28 +1,26 @@
 package ru.freeit.fadinglist.core
 
+import android.app.Activity
 import android.content.Context
 import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.util.TypedValue
-import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.ImageView
-import android.widget.TextView
-import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
+import androidx.annotation.ColorRes
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
-import androidx.appcompat.widget.LinearLayoutCompat
-import androidx.core.view.isVisible
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import ru.freeit.fadinglist.core.adapter.CoreAdapter
+import ru.freeit.fadinglist.core.adapter.ViewHolderWrapper
 import kotlin.math.roundToInt
 
 // Core
 
-fun Int.dp(ctx: Context) = (this * ctx.resources.displayMetrics.density).roundToInt()
+fun View.dp(int: Int) = (int * resources.displayMetrics.density).roundToInt()
 
 fun View.clickable() {
     isClickable = true
@@ -30,42 +28,6 @@ fun View.clickable() {
 
 fun View.alpha(a: Float) {
     alpha = a
-}
-
-fun View.scaleX(scale: Float) {
-    scaleX = scale
-}
-
-fun View.scale(scX: Float = 1f, scY: Float = 1f) {
-    scaleX = scX
-    scaleY = scY
-}
-
-fun View.scaleY(scale: Float) {
-    scaleY = scale
-}
-
-fun View.gone() {
-    isVisible = false
-}
-
-fun View.onClick(listener: () -> Unit) {
-    setOnClickListener { listener() }
-}
-
-fun View.white() = Color.WHITE
-fun View.black() = Color.BLACK
-
-fun View.padding(start: Int = paddingStart, top: Int = paddingTop, end: Int = paddingEnd, bottom: Int = paddingBottom) {
-    setPadding(start, top, end, bottom)
-}
-
-fun View.padding(horizontal: Int, vertical: Int) {
-    setPadding(horizontal, vertical, horizontal, vertical)
-}
-
-fun View.padding(all: Int) {
-    setPadding(all, all, all, all)
 }
 
 fun View.layoutParams(params: ViewGroup.LayoutParams) {
@@ -78,35 +40,13 @@ fun ViewGroup.addView(vararg view: View) {
     }
 }
 
-fun View.defaultRipple() = with(TypedValue()) {
-    context.theme.resolveAttribute(android.R.attr.selectableItemBackground, this, true)
-    setBackgroundResource(resourceId)
-}
 
 // FrameLayout
 
-fun frameLayout(ctx: Context, builder: FrameLayout.() -> Unit) : FrameLayout {
-    val frame = FrameLayout(ctx)
+fun Activity.frameLayout(builder: FrameLayout.() -> Unit = {}) : FrameLayout {
+    val frame = FrameLayout(this)
     builder(frame)
     return frame
-}
-
-// LinearLayout
-
-fun LinearLayoutCompat.centerVertical() {
-    gravity = Gravity.CENTER_VERTICAL
-}
-
-fun LinearLayoutCompat.centerHorizontal() {
-    gravity = Gravity.CENTER_HORIZONTAL
-}
-
-fun LinearLayoutCompat.horizontal() {
-    orientation = LinearLayoutCompat.HORIZONTAL
-}
-
-fun LinearLayoutCompat.vertical() {
-    orientation = LinearLayoutCompat.VERTICAL
 }
 
 // TextView
@@ -117,17 +57,10 @@ fun textView(context: Context, init: AppCompatTextView.() -> Unit) : AppCompatTe
     return text
 }
 
-fun AppCompatTextView.stringRes(@StringRes res: Int) {
-    setText(res)
-}
-
 fun AppCompatTextView.textSize(sp: Float) {
     setTextSize(TypedValue.COMPLEX_UNIT_SP, sp)
 }
 
-fun AppCompatTextView.bg(bg: Drawable) {
-    background = bg
-}
 
 fun AppCompatTextView.bgColor(color: Int) {
     setBackgroundColor(color)
@@ -137,28 +70,11 @@ fun rgba(red: Int, green: Int, blue: Int, alpha: Float) : Int {
     return Color.argb((alpha * 255).roundToInt(), red, green, blue)
 }
 
-fun AppCompatTextView.textCenter() {
-    textAlignment = View.TEXT_ALIGNMENT_CENTER
-}
-
-fun AppCompatTextView.color(color: Int) {
-    setTextColor(color)
-}
-
-fun <T> AppCompatTextView.text(value: T) {
-    text = value.toString()
+fun AppCompatTextView.colorRes(@ColorRes colorRes: Int) {
+    setTextColor(ContextCompat.getColor(context, colorRes))
 }
 
 // ImageView
-
-fun AppCompatImageView.bg(@DrawableRes res: Int) {
-    setBackgroundResource(res)
-}
-
-fun AppCompatImageView.src(@DrawableRes res: Int) {
-    setImageResource(res)
-}
-
 fun AppCompatImageView.centerCrop() {
     scaleType = ImageView.ScaleType.CENTER_CROP
 }
@@ -175,8 +91,8 @@ fun RecyclerView.linearVertical(reverse: Boolean = false) {
     layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, reverse)
 }
 
-fun listView(ctx: Context, init: RecyclerView.() -> Unit) : RecyclerView {
-    val list = RecyclerView(ctx)
+fun Activity.list(init: RecyclerView.() -> Unit) : RecyclerView {
+    val list = RecyclerView(this)
     list.init()
     return list
 }

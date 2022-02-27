@@ -3,6 +3,7 @@ package ru.freeit.fadinglist.ui
 import android.content.Context
 import android.view.MotionEvent
 import android.widget.FrameLayout
+import ru.freeit.fadinglist.R
 import ru.freeit.fadinglist.core.*
 
 class HeroListItemView(ctx: Context, listenItem: (item: (pos: Int, item: Hero) -> Unit) -> Unit) : FrameLayout(ctx) {
@@ -12,7 +13,8 @@ class HeroListItemView(ctx: Context, listenItem: (item: (pos: Int, item: Hero) -
 
         val img = imageView(ctx) {
             centerCrop()
-            layoutParams(frameLayoutParams().matchWidth().height(400.dp(ctx)).params())
+            layoutParams(frameLayoutParams().matchWidth()
+                .height(dp(400)).params())
         }
 
         val fadingView = textView(ctx) {
@@ -22,15 +24,12 @@ class HeroListItemView(ctx: Context, listenItem: (item: (pos: Int, item: Hero) -
         }
 
         val text = textView(ctx) {
-            color(white())
+            colorRes(R.color.white)
             textSize(20f)
-            layoutParams(
-                frameLayoutParams()
-                    .bottomStart()
-                    .marginStart(16.dp(ctx))
-                    .marginBottom(16.dp(ctx))
-                    .params()
-            )
+            layoutParams(frameLayoutParams().bottomStart()
+                    .marginStart(dp(16))
+                    .marginBottom(dp(16))
+                    .params())
         }
 
         listenItem { _, hero ->
