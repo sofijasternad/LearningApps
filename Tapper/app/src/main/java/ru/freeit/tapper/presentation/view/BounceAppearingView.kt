@@ -7,6 +7,7 @@ import android.util.AttributeSet
 import android.view.View
 import androidx.core.content.ContextCompat
 import ru.freeit.tapper.R
+import ru.freeit.tapper.core.changedColorAlpha
 import ru.freeit.tapper.presentation.anim.PercentAnimator
 import kotlin.random.Random
 
@@ -23,7 +24,7 @@ class BounceAppearingView @JvmOverloads constructor(
         private val alpha: Int = 100
     ) {
         fun draw(canvas: Canvas, paint: Paint, radiusPercent: Int, alphaPercent: Int) {
-            val newColor = paint.color.transparent((alpha * (alphaPercent / 100f)).toInt())
+            val newColor = paint.color.changedColorAlpha((alpha * (alphaPercent / 100f)).toInt())
             canvas.drawCircle(x * 1f, y * 1f, maxRadius * (radiusPercent / 100f), paint.apply {
                 color = newColor
             })

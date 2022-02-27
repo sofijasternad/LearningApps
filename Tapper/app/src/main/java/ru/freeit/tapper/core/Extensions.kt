@@ -1,8 +1,8 @@
-package ru.freeit.tapper.presentation.view
+package ru.freeit.tapper.core
 
 import android.graphics.Color
 
-fun Int.transparent(alpha: Int) : Int {
+fun Int.changedColorAlpha(alpha: Int) : Int {
     val red = Color.red(this)
     val green = Color.green(this)
     val blue = Color.blue(this)

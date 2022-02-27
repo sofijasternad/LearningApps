@@ -1,27 +1,31 @@
 package ru.freeit.tapper.model
 
-import ru.freeit.tapper.core.IntPrefs
+import ru.freeit.tapper.core.IntStorage
 
-class Count(private val intPrefs: IntPrefs, private val countObserver: (count: Int) -> Unit) {
+// our model
+class Count(private val intStorage: IntStorage, private val countObserver: (count: Int) -> Unit) {
+
+    // we have some value
     private var count: Int = 0
 
-    companion object {
-        private const val countKey = "count_key"
-    }
-
     init {
-        count = intPrefs.int(countKey, 0)
-        notifyObservers()
+        // get saved value from IntStorage
+        count = intStorage.int(countKey, 0)
+        // say about changes
+        countObserver.invoke(count)
     }
 
     fun increment() {
+        // add 1
         count++
-        notifyObservers()
-        intPrefs.saveInt(countKey, count)
+        // say about changes
+        countObserver.invoke(count)
+        // save value in IntStorage
+        intStorage.saveInt(countKey, count)
     }
 
-    private fun notifyObservers() {
-        countObserver.invoke(count)
+    companion object {
+        private const val countKey = "count_key"
     }
 
 }
