@@ -9,9 +9,11 @@ import ru.freeit.ponylist.databinding.PonyListItemBinding
 class PonyViewHolder(private val binding: PonyListItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(pony: Pony) {
-        binding.name.setText(pony.name())
-        binding.family.setText(pony.family())
-        binding.img.setImageResource(pony.img())
+        with(binding) {
+            pony.name(name)
+            pony.family(family)
+            pony.img(img)
+        }
     }
 
     companion object {

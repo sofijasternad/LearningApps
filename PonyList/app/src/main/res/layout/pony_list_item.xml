@@ -8,13 +8,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ru.freeit.ponylist.presentation.view.RoundedImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/img"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/starlight"
-        android:layout_width="160dp"
-        android:layout_height="160dp" />
+        app:shapeAppearanceOverlay="@style/CircleImageView"
+        android:layout_width="@dimen/pony_image_size"
+        android:layout_height="@dimen/pony_image_size" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/name"
