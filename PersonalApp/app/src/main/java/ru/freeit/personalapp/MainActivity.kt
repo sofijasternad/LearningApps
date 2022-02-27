@@ -1,5 +1,7 @@
 package ru.freeit.personalapp
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -22,8 +24,15 @@ class MainActivity : AppCompatActivity() {
 
         // обработка нажатия кнопки
         findViewById<Button>(R.id.subscribe_button).setOnClickListener {
+
+            // создаем Intent чтобы открыть любую ссылку (в данном случае ссылка на мой чатик в телеграме)
+            val link = "https://t.me/freeit256"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(link)
+            startActivity(intent)
+
             // показываем всплывающее сообщение внизу экрана
-            Snackbar.make(root, R.string.subscribed, Snackbar.LENGTH_SHORT).show()
+//            Snackbar.make(root, R.string.subscribed, Snackbar.LENGTH_SHORT).show()
         }
     }
 }
