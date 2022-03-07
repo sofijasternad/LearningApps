@@ -1,6 +1,6 @@
 ## Tapper
 
-Приложение, которое демонстрирует принцип архитектуры <code>MVC</code> и сохранение данных с помощью <code>SharedPreferences</code>
+Приложение, которое демонстрирует архитектуру <code>MVC</code> и сохранение данных с помощью <code>SharedPreferences</code>
 
 <table>
   <tr>
