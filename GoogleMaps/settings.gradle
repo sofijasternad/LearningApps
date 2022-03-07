@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "GoogleMaps"
 include ':app'
+include ':location-google'

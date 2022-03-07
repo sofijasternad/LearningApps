@@ -10,18 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-
-    <ru.freeit.awesomebuttons.icon.IconButton
-        android:id="@+id/define_location_button"
-        app:bgColor="@color/purple_500"
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/location_button"
         app:srcCompat="@drawable/ic_baseline_location_on_24"
+        android:background="@drawable/ic_location_ripple"
         android:padding="8dp"
+        android:layout_margin="16dp"
         android:layout_gravity="bottom|end"
-        android:layout_marginBottom="64dp"
-        android:layout_marginEnd="16dp"
         android:layout_width="40dp"
         android:layout_height="40dp" />
-
-
 
 </FrameLayout>
