@@ -26,9 +26,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun changeBackButtonVisibility() {
         val fragments = supportFragmentManager.fragments
-        if (fragments.isEmpty()) {
+        if (fragments.isEmpty())
             return
-        }
         val currentFragment = fragments.last()
         if (currentFragment is NoteScreen) {
             supportActionBar?.setDisplayHomeAsUpEnabled(true)

@@ -7,7 +7,7 @@ import ru.freeit.notes.data.db.AppDatabase
 import ru.freeit.notes.domain.entity.Tag
 import ru.freeit.notes.domain.repository.TagRepository
 
-class TagRepositoryImpl(
+class TagRepositoryBase(
     database: AppDatabase,
     private val dispatcher: CoroutineDispatcher = Dispatchers.IO
 ) : TagRepository {

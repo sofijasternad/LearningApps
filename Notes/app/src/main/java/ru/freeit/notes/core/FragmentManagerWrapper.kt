@@ -16,10 +16,10 @@ class FragmentManagerWrapper(private val manager: FragmentManager) {
     }
     fun replaceWithAnim(
         fragment: Fragment,
-        @AnimatorRes @AnimRes enterAnim: Int,
-        @AnimatorRes @AnimRes exitAnim: Int,
-        @AnimatorRes @AnimRes popEnter: Int,
-        @AnimatorRes @AnimRes popExit: Int
+        @AnimRes enterAnim: Int,
+        @AnimRes exitAnim: Int,
+        @AnimRes popEnter: Int,
+        @AnimRes popExit: Int
     ) {
         manager.beginTransaction()
             .setCustomAnimations(enterAnim, exitAnim, popEnter, popExit)

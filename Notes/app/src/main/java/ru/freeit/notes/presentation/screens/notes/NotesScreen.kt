@@ -20,7 +20,7 @@ import ru.freeit.notes.presentation.screens.note.NoteScreen
 
 class NotesScreen : Fragment() {
 
-    private lateinit var viewModel: NotesViewModel
+    private var viewModel: NotesViewModel? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,7 +31,8 @@ class NotesScreen : Fragment() {
 
         val viewModelFactory = (requireContext().applicationContext as App).viewModelFactories
             .notesViewModelFactory(this, savedInstanceState)
-        viewModel = ViewModelProvider(this, viewModelFactory).get(NotesViewModel::class.java)
+        val viewModel = ViewModelProvider(this, viewModelFactory).get(NotesViewModel::class.java)
+        this.viewModel = viewModel
 
         val fragmentManagerWrapper = FragmentManagerWrapper(parentFragmentManager)
 
@@ -75,22 +76,27 @@ class NotesScreen : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.no_sorting -> {
-                viewModel.sortDefault()
+                viewModel?.sortDefault()
                 true
             }
             R.id.create_date_sorting -> {
-                viewModel.sortByCreatedDate()
+                viewModel?.sortByCreatedDate()
                 true
             }
             R.id.edited_date_sorting -> {
-                viewModel.sortByEditedDate()
+                viewModel?.sortByEditedDate()
                 true
             }
             R.id.title_sorting -> {
-                viewModel.sortByTitle()
+                viewModel?.sortByTitle()
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        viewModel = null
     }
 }

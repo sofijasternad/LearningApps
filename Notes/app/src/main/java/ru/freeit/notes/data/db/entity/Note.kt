@@ -1,6 +1,6 @@
 package ru.freeit.notes.data.db.entity
 
-import ru.freeit.notes.domain.entity.Note as DomainNote
+import ru.freeit.notes.domain.entity.Note as NoteDomain
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -18,5 +18,5 @@ data class Note(
     var id: Long = 0L
 ) {
 
-    fun toDomain() = DomainNote(id, title, createdDate, editedDate)
+    fun domain() = NoteDomain(id, title, createdDate, editedDate)
 }

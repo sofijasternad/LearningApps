@@ -8,7 +8,7 @@ import ru.freeit.notes.core.CoroutineViewModel
 import ru.freeit.notes.core.LiveDataWrapper
 import ru.freeit.notes.domain.entity.Note
 import ru.freeit.notes.domain.repository.NoteRepository
-import ru.freeit.notes.domain.repository.SortingType
+import ru.freeit.notes.domain.entity.SortingType
 import ru.freeit.notes.domain.repository.TagRepository
 
 class NotesViewModel(

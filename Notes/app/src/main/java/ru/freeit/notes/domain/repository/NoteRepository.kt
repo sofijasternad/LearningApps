@@ -1,10 +1,7 @@
 package ru.freeit.notes.domain.repository
 
 import ru.freeit.notes.domain.entity.Note
-
-enum class SortingType {
-    CREATED_DATE, EDITED_DATE, TITLE, NO_SORTING
-}
+import ru.freeit.notes.domain.entity.SortingType
 
 interface NoteRepository {
     suspend fun notesBy(sortingType: SortingType = SortingType.TITLE) : List<Note>

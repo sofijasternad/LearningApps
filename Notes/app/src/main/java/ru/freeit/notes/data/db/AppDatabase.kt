@@ -19,7 +19,9 @@ abstract class AppDatabase : RoomDatabase() {
         private const val databaseName = "app_database"
 
         fun database(appContext: Context) : AppDatabase = Room.databaseBuilder(
-            appContext, AppDatabase::class.java, databaseName
+            appContext,
+            AppDatabase::class.java,
+            databaseName
         ).build()
     }
 }

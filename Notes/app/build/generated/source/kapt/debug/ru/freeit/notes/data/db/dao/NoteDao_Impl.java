@@ -93,7 +93,7 @@ public final class NoteDao_Impl implements NoteDao {
   }
 
   @Override
-  public Object add(final Note note, final Continuation<? super Long> arg1) {
+  public Object add(final Note note, final Continuation<? super Long> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Long>() {
       @Override
       public Long call() throws Exception {
@@ -106,11 +106,11 @@ public final class NoteDao_Impl implements NoteDao {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
-  public Object remove(final Note note, final Continuation<? super Unit> arg1) {
+  public Object remove(final Note note, final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -123,11 +123,11 @@ public final class NoteDao_Impl implements NoteDao {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
-  public Object update(final Note note, final Continuation<? super Unit> arg1) {
+  public Object update(final Note note, final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -140,11 +140,11 @@ public final class NoteDao_Impl implements NoteDao {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
-  public Object notesByCreatedDate(final Continuation<? super List<NoteWithTags>> arg0) {
+  public Object notesByCreatedDate(final Continuation<? super List<NoteWithTags>> continuation) {
     final String _sql = "select * from notes order by created_date";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -210,11 +210,11 @@ public final class NoteDao_Impl implements NoteDao {
           __db.endTransaction();
         }
       }
-    }, arg0);
+    }, continuation);
   }
 
   @Override
-  public Object notesByEditedDate(final Continuation<? super List<NoteWithTags>> arg0) {
+  public Object notesByEditedDate(final Continuation<? super List<NoteWithTags>> continuation) {
     final String _sql = "select * from notes order by edited_date";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -280,11 +280,11 @@ public final class NoteDao_Impl implements NoteDao {
           __db.endTransaction();
         }
       }
-    }, arg0);
+    }, continuation);
   }
 
   @Override
-  public Object notesByTitle(final Continuation<? super List<NoteWithTags>> arg0) {
+  public Object notesByTitle(final Continuation<? super List<NoteWithTags>> continuation) {
     final String _sql = "select * from notes order by title";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -350,11 +350,11 @@ public final class NoteDao_Impl implements NoteDao {
           __db.endTransaction();
         }
       }
-    }, arg0);
+    }, continuation);
   }
 
   @Override
-  public Object notes(final Continuation<? super List<NoteWithTags>> arg0) {
+  public Object notes(final Continuation<? super List<NoteWithTags>> continuation) {
     final String _sql = "select * from notes";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -420,11 +420,11 @@ public final class NoteDao_Impl implements NoteDao {
           __db.endTransaction();
         }
       }
-    }, arg0);
+    }, continuation);
   }
 
   @Override
-  public Object noteBy(final long id, final Continuation<? super NoteWithTags> arg1) {
+  public Object noteBy(final long id, final Continuation<? super NoteWithTags> continuation) {
     final String _sql = "select * from notes where id = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -492,7 +492,7 @@ public final class NoteDao_Impl implements NoteDao {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   public static List<Class<?>> getRequiredConverters() {

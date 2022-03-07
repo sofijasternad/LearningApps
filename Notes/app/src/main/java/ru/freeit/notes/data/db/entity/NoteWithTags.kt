@@ -11,5 +11,5 @@ data class NoteWithTags(
     )
     val tags: List<Tag>
 ) {
-    fun toDomain() = note.toDomain().copy(tags = tags.map { tag -> tag.toDomain() })
+    fun domain() = note.domain().copy(tags = tags.map { tag -> tag.domain() })
 }

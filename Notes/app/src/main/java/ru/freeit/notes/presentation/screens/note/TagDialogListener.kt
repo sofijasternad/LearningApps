@@ -9,10 +9,10 @@ class TagDialogListener(private val fragmentManager: FragmentManager) {
     private val requestKey = "tag_dialog_result_key"
 
     fun listen(viewLifecycleOwner: LifecycleOwner, onTitle: (title: String) -> Unit) {
-        fragmentManager.setFragmentResultListener(requestKey, viewLifecycleOwner, { requestKey, result ->
+        fragmentManager.setFragmentResultListener(requestKey, viewLifecycleOwner) { _, result ->
             val title = result.getString(titleKey, "")
             onTitle(title)
-        })
+        }
     }
 
     fun giveTitle(title: String) {

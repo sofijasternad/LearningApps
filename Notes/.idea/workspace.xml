@@ -13,14 +13,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7562a55-e435-4290-a72a-46af6c21b439" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/domain/repository/SortingType.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/core/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/core/App.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/core/FragmentManagerWrapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/core/FragmentManagerWrapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/data/db/AppDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/data/db/AppDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/data/repository/NoteRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/data/repository/NoteRepositoryBase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/data/repository/TagRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/data/repository/TagRepositoryBase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/domain/entity/Note.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/domain/entity/Note.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/domain/repository/NoteRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/domain/repository/NoteRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/note/TagDialogListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/note/TagDialogListener.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/notes/NotesScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ru/freeit/notes/presentation/screens/notes/NotesScreen.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[JYXNW20805003141]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/home/archi/.android/avd/Pixel_4_API_31_12_Android_.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -83,11 +94,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ScreenshotViewer.SavePath" value="$PROJECT_DIR$/screens" />
+    <property name="android-custom-view/home/archi/AndroidStudioProjects/LearningApps/Notes/app/src/main/java/ru/freeit/notes/presentation/screens/note/AddChip.kt_SELECTED" value="AddChip" />
+    <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/screens" />
-    <property name="memory.settings.postsync.last.time.stamp" value="1635925749367" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1646656782911" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -113,6 +127,7 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
