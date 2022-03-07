@@ -1,7 +1,7 @@
 package ru.freeit.dictapp.data.entity
 
 import androidx.annotation.StringRes
-import ru.freeit.dictapp.presentation.ui.DictResultUi
+import ru.freeit.dictapp.presentation.models.DictResultUi
 import ru.freeit.dictapp.R
 import ru.freeit.dictapp.core.*
 

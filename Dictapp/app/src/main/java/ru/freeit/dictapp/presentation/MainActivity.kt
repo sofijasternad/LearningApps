@@ -8,9 +8,9 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.*
 import ru.freeit.dictapp.core.Debounce
 import ru.freeit.dictapp.core.onTextChange
-import ru.freeit.dictapp.data.repo.DictRepositoryImpl
+import ru.freeit.dictapp.data.repo.DictRepositoryBase
 import ru.freeit.dictapp.databinding.ActivityMainBinding
-import ru.freeit.dictapp.presentation.ui.DictResultUi
+import ru.freeit.dictapp.presentation.models.DictResultUi
 import java.util.concurrent.Executors
 
 
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         val executor = Executors.newSingleThreadExecutor()
         val handler = Handler(Looper.getMainLooper())
-        val viewModel = ViewModelProvider(this, DictViewModelFactory(DictRepositoryImpl(executor, handler)))
+        val viewModel = ViewModelProvider(this, DictViewModelFactory(DictRepositoryBase(executor, handler)))
             .get(DictViewModel::class.java)
 
         viewModel.observe(this) { dictResult ->
@@ -39,9 +39,7 @@ class MainActivity : AppCompatActivity() {
             binding.wordText.isVisible = isSuccess
 
             when (dictResult) {
-                is DictResultUi.Error -> {
-                    dictResult.text(binding.errorText)
-                }
+                is DictResultUi.Error -> dictResult.text(binding.errorText)
                 is DictResultUi.Success -> {
                     dictResult.word(binding.wordText)
                     dictResult.definitions(binding.definitionsLayout)

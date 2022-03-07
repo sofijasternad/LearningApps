@@ -1,4 +1,4 @@
-package ru.freeit.dictapp.presentation.ui
+package ru.freeit.dictapp.presentation.models
 
 import android.widget.TextView
 import androidx.annotation.StringRes

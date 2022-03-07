@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import ru.freeit.dictapp.data.repo.DictRepository
-import ru.freeit.dictapp.presentation.ui.DictResultUi
+import ru.freeit.dictapp.presentation.models.DictResultUi
 
 class DictViewModel(private val repo: DictRepository) : ViewModel() {
 
