@@ -5,8 +5,8 @@
 Основные моменты:
 
 1. GET запрос сделан с помощью встроенного Java класса <code>HttpsURLConnection</code>
-2. JSON парсинг реализован с помощью Androd класса <code>JSONObject</code>
-3. Выполнение в background потоке сделано через <code>ThreadPoolExecutor</code>
+2. JSON парсинг реализован с помощью Android класса <code>JSONObject</code>
+3. Выполнение в фоновом потоке сделано через <code>ThreadPoolExecutor</code>
 
 ### Скрины
 
