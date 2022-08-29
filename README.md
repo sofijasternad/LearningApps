@@ -10,7 +10,7 @@
 
 Приложения:
 
-1. [PersonalApp](https://github.com/KiberneticWorm/LearningApps/tree/master/PersonalApp) - простое приложение с одним экраном, содержит картинку, текст и кнопку, по которой можно перейти на сайт <code>Snackbar</code>
+1. [PersonalApp](https://github.com/KiberneticWorm/LearningApps/tree/master/PersonalApp) - простое приложение с одним экраном, содержит картинку, текст и кнопку, по которой повляется <code>Snackbar</code>
 2. [Tapper](https://github.com/KiberneticWorm/LearningApps/tree/master/Tapper) - обычный кликер, архитектура <code>MVC</code>, упрощенный вид паттерна <code>Observer</code>, создание кастомного <code>View</code> с красивым эффектом, работа с <code>SharedPreferences</code>
 3. [PonyList](https://github.com/KiberneticWorm/LearningApps/tree/master/PonyList) - работа со списком <code>RecyclerView</code> и адаптером <code>ListAdapter</code>, добавление <code>ItemAnimtor'а</code> и <code>ItemDecoration'а</code> для списка
 4. [GoogleAuth](https://github.com/KiberneticWorm/LearningApps/tree/master/GoogleAuth) - подключение Firebase к проекту, добавление Google авторизации, получение данных аккаунта и выход из него 
@@ -33,7 +33,7 @@
 
 Если вы заинтересовались моим репозиторием или у вас появилась идея как его улучшить или что-то добавить, то сообщите мне об этом в телеграме:
 
-<a href="https://t.me/little_twilly"><img src="https://avatars.mds.yandex.net/get-zen_doc/2359038/pub_60129a10f26bf62c167552bc_60129bd16e30ac5150b690b2/scale_1200" width=160 /></a>
+<a href="https://t.me/eviltwilly"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/512px-Telegram_2019_Logo.svg.png?20220331104809" width=160 /></a>
 
 ## Скрины
 
