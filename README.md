@@ -25,7 +25,7 @@
 
 ## Как начать?
 
-Следуйте следующей видео-инструкции:
+Следуйте видео-инструкции:
 
 [![demo](https://img.youtube.com/vi/B94pYHeTZ3k/0.jpg)](https://www.youtube.com/watch?v=B94pYHeTZ3k)
 
